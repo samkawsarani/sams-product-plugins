@@ -1,0 +1,9 @@
+{
+  "name": "write-comms",
+  "description": "Internal communications: status reports, newsletters, and stakeholder updates",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

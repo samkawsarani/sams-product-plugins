@@ -1,0 +1,9 @@
+{
+  "name": "analyze-research",
+  "description": "User research synthesis from interviews, transcripts, and feedback",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

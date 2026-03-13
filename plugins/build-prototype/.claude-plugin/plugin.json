@@ -1,0 +1,9 @@
+{
+  "name": "build-prototype",
+  "description": "React/TypeScript prototype builder from PRDs using Shadcn/ui",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

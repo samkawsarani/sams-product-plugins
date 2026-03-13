@@ -1,0 +1,9 @@
+{
+  "name": "translate-i18n",
+  "description": "English-French translation with Canadian French and OQLF compliance",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

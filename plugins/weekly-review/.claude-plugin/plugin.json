@@ -1,0 +1,9 @@
+{
+  "name": "weekly-review",
+  "description": "Weekly review with goal progress, blockers, and next week planning",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

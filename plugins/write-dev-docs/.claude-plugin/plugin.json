@@ -1,0 +1,9 @@
+{
+  "name": "write-dev-docs",
+  "description": "Developer documentation: API references, guides, and Postman collections",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

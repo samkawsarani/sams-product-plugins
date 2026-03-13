@@ -1,0 +1,9 @@
+{
+  "name": "write-doc",
+  "description": "Product documents: PRDs, specs, briefs, user stories, and decision docs",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

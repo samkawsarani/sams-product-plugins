@@ -1,0 +1,134 @@
+{
+  "name": "sams-product-plugins",
+  "owner": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  },
+  "metadata": {
+    "description": "A marketplace of Claude Code plugins for product management workflows",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "analyze-competitor",
+      "source": "./plugins/analyze-competitor",
+      "description": "Competitive analysis with feature comparison, pricing research, and market positioning",
+      "category": "research",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "analyze-metrics",
+      "source": "./plugins/analyze-metrics",
+      "description": "Product metrics analysis for usage, adoption, conversion, retention, and revenue data",
+      "category": "analytics",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "analyze-research",
+      "source": "./plugins/analyze-research",
+      "description": "User research synthesis from interviews, transcripts, and feedback",
+      "category": "research",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "build-prototype",
+      "source": "./plugins/build-prototype",
+      "description": "React/TypeScript prototype builder from PRDs using Shadcn/ui",
+      "category": "development",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "commit",
+      "source": "./plugins/commit",
+      "description": "Conventional commits with emoji prefixes and smart message formatting",
+      "category": "git",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "create-pr",
+      "source": "./plugins/create-pr",
+      "description": "Pull request creation with comprehensive summary and test plan",
+      "category": "git",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "daily-pulse",
+      "source": "./plugins/daily-pulse",
+      "description": "Morning briefing combining calendar agenda with task priorities",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "push",
+      "source": "./plugins/push",
+      "description": "Push to remote with upstream tracking and force-push safety checks",
+      "category": "git",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "translate-i18n",
+      "source": "./plugins/translate-i18n",
+      "description": "English-French translation with Canadian French and OQLF compliance",
+      "category": "localization",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "weekly-recap",
+      "source": "./plugins/weekly-recap",
+      "description": "Executive-ready weekly recap structured around key initiatives",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "weekly-review",
+      "source": "./plugins/weekly-review",
+      "description": "Weekly review with goal progress, blockers, and next week planning",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "write-comms",
+      "source": "./plugins/write-comms",
+      "description": "Internal communications: status reports, newsletters, and stakeholder updates",
+      "category": "writing",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "write-dev-docs",
+      "source": "./plugins/write-dev-docs",
+      "description": "Developer documentation: API references, guides, and Postman collections",
+      "category": "writing",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "write-doc",
+      "source": "./plugins/write-doc",
+      "description": "Product documents: PRDs, specs, briefs, user stories, and decision docs",
+      "category": "writing",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "write-ux-copy",
+      "source": "./plugins/write-ux-copy",
+      "description": "UX copy for buttons, errors, tooltips, notifications, and onboarding",
+      "category": "writing",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    }
+  ]
+}
