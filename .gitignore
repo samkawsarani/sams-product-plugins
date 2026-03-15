@@ -19,7 +19,7 @@ Thumbs.db
 *.log
 logs/
 
-# Build artifacts (if using MCP servers)
+# Build artifacts
 *.pyc
 __pycache__/
 .pytest_cache/
