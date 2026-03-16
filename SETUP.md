@@ -30,50 +30,25 @@ claude plugin add dir:~/Projects/sams-product-plugins
 
 ## Step 2: Install plugins
 
-Present the plugins grouped by category. For each category, show the plugin name and a one-line description, then ask which ones the user wants to enable. Enable selected plugins with `claude plugin enable <name>@sams-product-plugins`.
+Present the full list of available plugins. Show the table below and ask which ones the user wants to enable. Enable selected plugins with `claude plugin enable <name>@sams-product-plugins`.
 
-### Analytics & Data
-| Plugin | Description |
-|--------|-------------|
-| `analyze-metrics` | Product metrics analysis for usage, adoption, conversion, retention, and revenue data |
-
-### Research & Analysis
-| Plugin | Description |
-|--------|-------------|
-| `analyze-competitor` | Competitive analysis with feature comparison, pricing research, and market positioning |
-| `analyze-research` | User research synthesis from interviews, transcripts, and feedback |
-
-### Documentation & Writing
-| Plugin | Description |
-|--------|-------------|
-| `write-doc` | Product documents: PRDs, specs, briefs, user stories, and decision docs |
-| `write-dev-docs` | Developer documentation: API references, guides, and Postman collections |
-| `write-comms` | Internal communications: status reports, newsletters, and stakeholder updates |
-| `write-ux-copy` | UX copy for buttons, errors, tooltips, notifications, and onboarding |
-
-### Git & Version Control
-| Plugin | Description |
-|--------|-------------|
-| `commit` | Conventional commits with emoji prefixes and smart message formatting |
-| `create-pr` | Pull request creation with comprehensive summary and test plan |
-| `push` | Push to remote with upstream tracking and force-push safety checks |
-
-### Productivity & Planning
-| Plugin | Description |
-|--------|-------------|
-| `daily-pulse` | Morning briefing combining calendar agenda with task priorities |
-| `weekly-recap` | Executive-ready weekly recap structured around key initiatives |
-| `weekly-review` | Weekly review with goal progress, blockers, and next week planning |
-
-### Development & Prototyping
-| Plugin | Description |
-|--------|-------------|
-| `build-prototype` | React/TypeScript prototype builder from PRDs using Shadcn/ui |
-
-### Localization
-| Plugin | Description |
-|--------|-------------|
-| `translate-i18n` | English-French translation with Canadian French and OQLF compliance |
+| Plugin | Category | Description |
+|--------|----------|-------------|
+| `analyze-competitor` | Research | Competitive analysis with feature comparison, pricing research, and market positioning |
+| `analyze-metrics` | Analytics | Product metrics analysis for usage, adoption, conversion, retention, and revenue data |
+| `analyze-research` | Research | User research synthesis from interviews, transcripts, and feedback |
+| `build-prototype` | Development | React/TypeScript prototype builder from PRDs using Shadcn/ui |
+| `commit` | Git | Conventional commits with emoji prefixes and smart message formatting |
+| `create-pr` | Git | Pull request creation with comprehensive summary and test plan |
+| `daily-pulse` | Productivity | Morning briefing combining calendar agenda with task priorities |
+| `push` | Git | Push to remote with upstream tracking and force-push safety checks |
+| `translate-i18n` | Localization | English-French translation with Canadian French and OQLF compliance |
+| `weekly-recap` | Productivity | Executive-ready weekly recap structured around key initiatives |
+| `weekly-review` | Productivity | Weekly review with goal progress, blockers, and next week planning |
+| `write-comms` | Writing | Internal communications: status reports, newsletters, and stakeholder updates |
+| `write-dev-docs` | Writing | Developer documentation: API references, guides, and Postman collections |
+| `write-doc` | Writing | Product documents: PRDs, specs, briefs, user stories, and decision docs |
+| `write-ux-copy` | Writing | UX copy for buttons, errors, tooltips, notifications, and onboarding |
 
 If the user wants all plugins, enable them all at once:
 ```bash
