@@ -7,17 +7,9 @@ My Claude Code setup. A plugin marketplace of Claude Code skills for product man
 
 ## Setup
 
-### Quick Start
+### Quick Start (automatic)
 
-**Option A — Shell script:**
-
-```bash
-bash <(curl -s https://raw.githubusercontent.com/samkawsarani/sams-product-plugins/main/setup.sh)
-```
-
-**Option B — Claude Code interactive:**
-
-Paste this into Claude Code and it will walk you through setup:
+Paste this into Claude Code and it will walk you through setup interactively — choosing your install method and which plugins to enable:
 
 ```
 Go to https://github.com/samkawsarani/sams-product-plugins/blob/main/SETUP.md and set me up.
