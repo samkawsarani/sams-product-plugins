@@ -7,30 +7,66 @@ A plugin marketplace of Claude Code skills for product management workflows. Ins
 
 ## Setup
 
-**Option A — directly from GitHub (recommended):**
+### Quick Start (automatic)
+
+Paste this into Claude Code and it will walk you through setup interactively — choosing your install method and which plugins to enable:
 
 ```
-/plugin marketplace add samkawsarani/sams-product-plugins
+Go to https://github.com/samkawsarani/sams-product-plugins/blob/main/SETUP.md and set me up.
+```
+
+### Manual Install
+
+**Option A — directly from GitHub (recommended):**
+
+```bash
+claude plugin add github:samkawsarani/sams-product-plugins
+claude plugin enable analyze-metrics@sams-product-plugins
+claude plugin enable analyze-competitor@sams-product-plugins
+claude plugin enable analyze-research@sams-product-plugins
+claude plugin enable build-prototype@sams-product-plugins
+claude plugin enable commit@sams-product-plugins
+claude plugin enable create-pr@sams-product-plugins
+claude plugin enable daily-pulse@sams-product-plugins
+claude plugin enable push@sams-product-plugins
+claude plugin enable translate-i18n@sams-product-plugins
+claude plugin enable weekly-recap@sams-product-plugins
+claude plugin enable weekly-review@sams-product-plugins
+claude plugin enable write-comms@sams-product-plugins
+claude plugin enable write-dev-docs@sams-product-plugins
+claude plugin enable write-doc@sams-product-plugins
+claude plugin enable write-ux-copy@sams-product-plugins
 ```
 
 **Option B — clone locally first:**
 
 ```bash
-# Clone this repo first
-git clone https://github.com/samkawsarani/sams-product-plugins.git pm-skills
-cd pm-skills
-
-# Then add the local path as a marketplace:
-/plugin marketplace add ./pm-skills
+git clone https://github.com/samkawsarani/sams-product-plugins ~/Projects/sams-product-plugins
+claude plugin add dir:~/Projects/sams-product-plugins
+claude plugin enable analyze-metrics@sams-product-plugins
+claude plugin enable analyze-competitor@sams-product-plugins
+claude plugin enable analyze-research@sams-product-plugins
+claude plugin enable build-prototype@sams-product-plugins
+claude plugin enable commit@sams-product-plugins
+claude plugin enable create-pr@sams-product-plugins
+claude plugin enable daily-pulse@sams-product-plugins
+claude plugin enable push@sams-product-plugins
+claude plugin enable translate-i18n@sams-product-plugins
+claude plugin enable weekly-recap@sams-product-plugins
+claude plugin enable weekly-review@sams-product-plugins
+claude plugin enable write-comms@sams-product-plugins
+claude plugin enable write-dev-docs@sams-product-plugins
+claude plugin enable write-doc@sams-product-plugins
+claude plugin enable write-ux-copy@sams-product-plugins
 ```
 
-## Verify
+### Verify
 
-```
-claude plugin marketplace list
+```bash
+claude plugin list
 ```
 
-You should see the marketplace and its available plugins.
+You should see the marketplace and all enabled plugins listed.
 
 ## Structure
 
