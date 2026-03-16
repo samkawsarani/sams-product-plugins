@@ -16,22 +16,21 @@ A plugin marketplace of Claude Code skills for product management workflows. Ins
 **Option B — clone locally first:**
 
 ```bash
+# Clone this repo first
 git clone https://github.com/samkawsarani/sams-product-plugins.git pm-skills
 cd pm-skills
-```
 
-Then add the local path as a marketplace:
-
-```
+# Then add the local path as a marketplace:
 /plugin marketplace add ./pm-skills
 ```
+
 ## Verify
 
 ```
-claude plugin list
+claude plugin marketplace list
 ```
 
-You should see each installed plugin listed with its version.
+You should see the marketplace and its available plugins.
 
 ## Structure
 
