@@ -17,34 +17,22 @@ Go to https://github.com/samkawsarani/sams-product-plugins/blob/main/SETUP.md an
 
 ### Manual Install
 
-**Option A — directly from GitHub (recommended):**
+**Step 1 — Add the marketplace (choose one):**
 
 ```bash
+# Option A: directly from GitHub (recommended)
 claude plugin add github:samkawsarani/sams-product-plugins
-claude plugin enable analyze-metrics@sams-product-plugins
-claude plugin enable analyze-competitor@sams-product-plugins
-claude plugin enable analyze-research@sams-product-plugins
-claude plugin enable build-prototype@sams-product-plugins
-claude plugin enable commit@sams-product-plugins
-claude plugin enable create-pr@sams-product-plugins
-claude plugin enable daily-pulse@sams-product-plugins
-claude plugin enable push@sams-product-plugins
-claude plugin enable translate-i18n@sams-product-plugins
-claude plugin enable weekly-recap@sams-product-plugins
-claude plugin enable weekly-review@sams-product-plugins
-claude plugin enable write-comms@sams-product-plugins
-claude plugin enable write-dev-docs@sams-product-plugins
-claude plugin enable write-doc@sams-product-plugins
-claude plugin enable write-ux-copy@sams-product-plugins
+
+# Option B: clone locally first, then add
+git clone https://github.com/samkawsarani/sams-product-plugins <path>
+claude plugin add dir:<path>
 ```
 
-**Option B — clone locally first:**
+**Step 2 — Enable the plugins you want:**
 
 ```bash
-git clone https://github.com/samkawsarani/sams-product-plugins ~/Projects/sams-product-plugins
-claude plugin add dir:~/Projects/sams-product-plugins
-claude plugin enable analyze-metrics@sams-product-plugins
 claude plugin enable analyze-competitor@sams-product-plugins
+claude plugin enable analyze-metrics@sams-product-plugins
 claude plugin enable analyze-research@sams-product-plugins
 claude plugin enable build-prototype@sams-product-plugins
 claude plugin enable commit@sams-product-plugins
