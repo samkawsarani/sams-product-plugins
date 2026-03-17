@@ -1,5 +1,5 @@
-[License: CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[Star this repo](https://github.com/samkawsarani/sams-product-plugins)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![Star this repo](https://img.shields.io/github/stars/samkawsarani/sams-product-plugins?style=social)](https://github.com/samkawsarani/sams-product-plugins)
 
 # PM Skills Marketplace
 
