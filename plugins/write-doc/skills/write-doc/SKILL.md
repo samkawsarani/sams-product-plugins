@@ -5,6 +5,16 @@ description: Generates PM documents (PRDs, specs, briefs, user stories, decision
 argument-hint: [doc-type] [name] — types: prd, brief, spec, user-stories, decision
 ---
 
+## Dependency Check
+
+Before starting, check optional dependencies:
+
+1. **qmd (optional):** Run `command -v qmd`.
+   - If **available**: Use `qmd query` for semantic search across knowledge bases — this gives the best results.
+   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
+
+---
+
 # Product Documentation Generator
 
 Generate comprehensive product documentation (PRDs, briefs, specs, user stories, decision docs) with full context from your knowledge base.

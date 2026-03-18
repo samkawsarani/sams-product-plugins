@@ -6,6 +6,17 @@ allowed-tools: list_tasks, find_overdue_tasks, get_task_summary, Glob, Read, Bas
 argument-hint: [optional: "tomorrow", "week"]
 ---
 
+## Dependency Check
+
+Before starting, verify required dependencies:
+
+1. **gws CLI (required):** Run `command -v gws`.
+   - If **missing**: Tell the user: "The `gws` CLI is required to fetch calendar data. See https://github.com/googleworkspace/cli for installation, then try again." **Stop here.**
+2. **MCP task tools (required):** Check if `list_tasks` is available in your tools list.
+   - If **missing**: Tell the user: "Task MCP tools are not configured. This skill requires task management tools (`list_tasks`, `find_overdue_tasks`). Please configure the task MCP server and try again." **Stop here.**
+
+---
+
 ## Context
 
 Tasks are in `tasks/` with YAML frontmatter (priority, status, due_date, category).

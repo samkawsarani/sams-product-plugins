@@ -4,6 +4,21 @@ model: sonnet
 description: Builds working React/TypeScript prototypes from PRDs, product briefs, or user stories using Shadcn/ui components. Invoked when asked to create prototypes, validate concepts with code, build functional demos from product requirements, or when user says "build me a prototype", "make a demo", or "mock this up in code".
 ---
 
+## Dependency Check
+
+Before starting, verify required dependencies:
+
+1. **python3 (required):** Run `command -v python3`.
+   - If **missing**: Tell the user: "Python 3 is required to run prototype scripts. Install it with `brew install python` or `brew install uv && uv python install`, then try again." **Stop here.**
+2. **node (required):** Run `command -v node`.
+   - If **missing**: Tell the user: "Node.js is required to build prototypes. Install it with `brew install node`, then try again." **Stop here.**
+3. **npm (required):** Run `command -v npm`.
+   - If **missing**: Tell the user: "npm is required to install dependencies. Install Node.js with `brew install node` (npm is included), then try again." **Stop here.**
+4. **npx (required):** Run `command -v npx`.
+   - If **missing**: Tell the user: "npx is required to run Shadcn CLI. Install Node.js with `brew install node` (npx is included), then try again." **Stop here.**
+
+---
+
 # Prototype Builder
 
 Create functional code prototypes from product requirements to validate concepts and demonstrate feasibility.

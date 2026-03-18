@@ -6,6 +6,18 @@ allowed-tools: list_tasks, get_task_summary, find_stale_tasks, Glob, Read, Bash(
 argument-hint: [optional: "quick" for condensed, "slack" for Slack-optimized]
 ---
 
+## Dependency Check
+
+Before starting, verify dependencies:
+
+1. **MCP task tools (required):** Check if `list_tasks` is available in your tools list.
+   - If **missing**: Tell the user: "Task MCP tools are not configured. This skill requires task management tools (`list_tasks`, `get_task_summary`, `find_stale_tasks`). Please configure the task MCP server and try again." **Stop here.**
+2. **qmd (optional):** Run `command -v qmd`.
+   - If **available**: Use `qmd query` for semantic search across knowledge bases.
+   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
+
+---
+
 # Weekly Recap Generator
 
 Generate a polished, exec-ready weekly recap structured around key initiatives. This is for sharing upward — not an internal reflection. Focus on initiative progress, strategic signals from meetings, and what's coming next.

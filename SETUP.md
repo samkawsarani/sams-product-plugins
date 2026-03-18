@@ -83,8 +83,8 @@ Based on which plugins the user enabled, mention relevant optional dependencies:
 
 | Dependency | Required by | Install |
 |-----------|-------------|---------|
-| `qmd` CLI | analyze-research, weekly-recap, weekly-review, write-dev-docs, write-doc | [qmd docs](https://github.com/amanaiproduct/qmd) |
-| `gws` CLI (Google Workspace) | daily-pulse, write-comms | [gws docs](https://github.com/amanaiproduct/gws) |
+| `qmd` CLI | analyze-research, weekly-recap, weekly-review, write-dev-docs, write-doc | [qmd docs](https://github.com/tobi/qmd) |
+| `gws` CLI (Google Workspace) | daily-pulse, write-comms | [gws docs](https://github.com/googleworkspace/cli) |
 | `gh` (GitHub CLI) | create-pr | `brew install gh` |
 | Python 3 | analyze-metrics, build-prototype | `brew install python` |
 | Node.js / `npx` | build-prototype | `brew install node` |
