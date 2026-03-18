@@ -5,6 +5,16 @@ description: Generates best-in-class developer documentation (API references, in
 argument-hint: [doc-type] [name] — types: api-reference, guide, recipe, postman
 ---
 
+## Dependency Check
+
+Before starting, check optional dependencies:
+
+1. **qmd (optional):** Run `command -v qmd`.
+   - If **available**: Use `qmd query` for semantic search across knowledge bases — this gives the best results.
+   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
+
+---
+
 # Developer Documentation Generator
 
 Generate Stripe-quality developer documentation — API references, integration guides, code recipes, and Postman collections — from any input source.

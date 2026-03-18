@@ -4,6 +4,15 @@ model: sonnet
 description: Analyzes product metrics (usage, adoption, conversion, retention, revenue, payments/fintech) and identifies patterns in user behavior. Invoked when asked to interpret metrics, identify trends, assess feature adoption, evaluate funnel performance, or analyze payment data from CSV/Excel exports, SQL results, or analytics dashboards. Also triggers on "how are we doing on X", "what do the numbers show", or when user shares a CSV or dashboard.
 ---
 
+## Dependency Check
+
+Before starting, verify required dependencies:
+
+1. **python3 (required):** Run `command -v python3`.
+   - If **missing**: Tell the user: "Python 3 is required to run metric calculation scripts. Install it with `brew install python` or `brew install uv && uv python install`, then try again." **Stop here.**
+
+---
+
 # Product Metrics Analysis
 
 Analyze product data to surface insights, identify patterns, and provide actionable recommendations. Apply appropriate PM frameworks based on the question and data at hand.

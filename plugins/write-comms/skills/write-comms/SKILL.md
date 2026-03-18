@@ -4,6 +4,21 @@ model: sonnet
 description: Generates internal communications (3P updates, stakeholder reports, newsletters, FAQs, incident reports) in company-preferred formats. Invoked when asked to write status reports, leadership updates, project updates, or any internal communication. Also triggers on "write a status update", "draft an email to leadership", or "I need a 3P update".
 ---
 
+## Dependency Check
+
+Before starting, verify required dependencies:
+
+1. **Slack MCP (required):** Check if Slack tools are available in your tools list.
+   - If **missing**: Tell the user: "The Slack MCP server is not configured. This skill requires Slack access to pull team updates. Please configure the Slack MCP server and try again." **Stop here.**
+2. **Linear MCP (required):** Check if Linear tools are available in your tools list.
+   - If **missing**: Tell the user: "The Linear MCP server is not configured. This skill requires Linear access to pull project data. Please configure the Linear MCP server and try again." **Stop here.**
+3. **gws CLI (required):** Run `command -v gws`.
+   - If **missing**: Tell the user: "The `gws` CLI is required to fetch calendar and Drive data. See https://github.com/googleworkspace/cli for installation, then try again." **Stop here.**
+4. **Google Drive MCP (required):** Check if Google Drive tools are available in your tools list.
+   - If **missing**: Tell the user: "The Google Drive MCP server is not configured. This skill requires Drive access to pull shared documents. Please configure the Google Drive MCP server and try again." **Stop here.**
+
+---
+
 # Internal Communications Writer
 
 Generate clear, actionable internal communications that keep teams aligned and leadership informed.

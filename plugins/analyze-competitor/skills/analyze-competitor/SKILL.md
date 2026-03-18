@@ -4,6 +4,15 @@ model: opus
 description: Analyzes competitors including features, pricing, target customers, strengths, gaps, and market positioning. Handles single-competitor deep dives and multi-competitor parallel research with comparison matrix. Invoked when asked to research, analyze, or compare against competitors, when user mentions a competitor by name, or says "how does X compare" or "research competitor Y".
 ---
 
+## Dependency Check
+
+Before starting, verify required dependencies:
+
+1. **Notion MCP (required):** Check if `Notion:notion-search` is available in your tools list.
+   - If **missing**: Tell the user: "The Notion MCP server is not configured. This skill requires Notion access to search for competitor research. Please configure the Notion MCP server and try again." **Stop here.**
+
+---
+
 # Competitor Analysis Skill
 
 Perform comprehensive competitive analysis of a single competitor, gathering intelligence from multiple sources to create a structured research report.

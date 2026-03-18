@@ -4,6 +4,16 @@ model: opus
 description: Analyzes user interviews, research transcripts, and feedback to extract themes, generate insights, create personas, and synthesize findings into actionable reports. Invoked when asked to analyze interviews, synthesize research, identify pain points, produce research synthesis, or when user says "what did users say about X", "summarize research on Y", or shares interview notes.
 ---
 
+## Dependency Check
+
+Before starting, check optional dependencies:
+
+1. **qmd (optional):** Run `command -v qmd`.
+   - If **available**: Use `qmd query` for semantic search across knowledge bases — this gives the best results.
+   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
+
+---
+
 # User Research Analysis
 
 ## Overview

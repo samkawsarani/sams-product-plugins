@@ -6,6 +6,15 @@ allowed-tools: Bash(git *), Bash(gh pr create:*)
 argument-hint: [optional PR title]
 ---
 
+## Dependency Check
+
+Before starting, verify required dependencies:
+
+1. **gh CLI (required):** Run `command -v gh`.
+   - If **missing**: Tell the user: "The GitHub CLI (`gh`) is required to create pull requests. Install it with `brew install gh`, then authenticate with `gh auth login`, and try again." **Stop here.**
+
+---
+
 ## Context
 
 - Current branch: !`git branch --show-current`
