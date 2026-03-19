@@ -75,6 +75,14 @@
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     },
     {
+      "name": "sync-granola-meetings",
+      "source": "./plugins/sync-granola-meetings",
+      "description": "Sync Granola meetings to local meetings folder with transcripts and metadata",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
       "name": "translate-i18n",
       "source": "./plugins/translate-i18n",
       "description": "English-French translation with Canadian French and OQLF compliance",

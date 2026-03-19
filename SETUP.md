@@ -42,6 +42,7 @@ Present the full list of available plugins. Show the table below and ask which o
 | `create-pr` | Git | Pull request creation with comprehensive summary and test plan |
 | `daily-pulse` | Productivity | Morning briefing combining calendar agenda with task priorities |
 | `push` | Git | Push to remote with upstream tracking and force-push safety checks |
+| `sync-granola-meetings` | Productivity | Sync Granola meetings to local meetings folder with transcripts and metadata |
 | `translate-i18n` | Localization | English-French translation with Canadian French and OQLF compliance |
 | `weekly-recap` | Productivity | Executive-ready weekly recap structured around key initiatives |
 | `weekly-review` | Productivity | Weekly review with goal progress, blockers, and next week planning |
@@ -60,6 +61,7 @@ claude plugin enable commit@sams-product-plugins
 claude plugin enable create-pr@sams-product-plugins
 claude plugin enable daily-pulse@sams-product-plugins
 claude plugin enable push@sams-product-plugins
+claude plugin enable sync-granola-meetings@sams-product-plugins
 claude plugin enable translate-i18n@sams-product-plugins
 claude plugin enable weekly-recap@sams-product-plugins
 claude plugin enable weekly-review@sams-product-plugins
@@ -88,5 +90,7 @@ Based on which plugins the user enabled, mention relevant optional dependencies:
 | `gh` (GitHub CLI) | create-pr | `brew install gh` |
 | Python 3 | analyze-metrics, build-prototype | `brew install python` |
 | Node.js / `npx` | build-prototype | `brew install node` |
+
+| Granola MCP | sync-granola-meetings | [Granola](https://granola.ai) |
 
 Only mention dependencies for the plugins the user actually enabled. If none of their chosen plugins need external dependencies, skip this step.
