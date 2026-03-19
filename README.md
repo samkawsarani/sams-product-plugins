@@ -40,6 +40,7 @@ claude plugin enable commit@sams-product-plugins
 claude plugin enable create-pr@sams-product-plugins
 claude plugin enable daily-pulse@sams-product-plugins
 claude plugin enable push@sams-product-plugins
+claude plugin enable sync-granola-meetings@sams-product-plugins
 claude plugin enable translate-i18n@sams-product-plugins
 claude plugin enable weekly-recap@sams-product-plugins
 claude plugin enable weekly-review@sams-product-plugins
@@ -86,6 +87,7 @@ plugins/skill-name/
 | [create-pr](./plugins/create-pr/)                   | Git          | Pull request creation with comprehensive summary and test plan                         |
 | [daily-pulse](./plugins/daily-pulse/)               | Productivity | Morning briefing combining calendar agenda with task priorities                        |
 | [push](./plugins/push/)                             | Git          | Push to remote with upstream tracking and force-push safety checks                     |
+| [sync-granola-meetings](./plugins/sync-granola-meetings/) | Productivity | Sync Granola meetings to local meetings folder with transcripts and metadata     |
 | [translate-i18n](./plugins/translate-i18n/)         | Localization | English-French translation with Canadian French and OQLF compliance                    |
 | [weekly-recap](./plugins/weekly-recap/)             | Productivity | Executive-ready weekly recap structured around key initiatives                         |
 | [weekly-review](./plugins/weekly-review/)           | Productivity | Weekly review with goal progress, blockers, and next week planning                     |
@@ -107,6 +109,7 @@ plugins/skill-name/
 | `git`                            | commit, create-pr, push                                                  |
 | Python 3                         | analyze-metrics, build-prototype                                         |
 | Node.js, `npx`                   | build-prototype                                                          |
+| Granola MCP                      | sync-granola-meetings                                                    |
 | Notion MCP (optional)            | analyze-competitor                                                       |
 | Slack MCP, Linear MCP (optional) | write-comms                                                              |
 
