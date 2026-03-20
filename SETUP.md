@@ -2,6 +2,8 @@
 
 You are helping the user install plugins from [Sam's PM Skills Marketplace](https://github.com/samkawsarani/sams-product-plugins). Follow the steps below in order. Be conversational and concise.
 
+**Alternative:** If you prefer installing skills directly without the marketplace, see the "Direct Skill Install" section in [README.md](./README.md).
+
 ---
 
 ## Step 1: Choose install method
