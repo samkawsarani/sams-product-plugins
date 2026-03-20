@@ -50,6 +50,24 @@ claude plugin enable write-doc@sams-product-plugins
 claude plugin enable write-ux-copy@sams-product-plugins
 ```
 
+### Direct Skill Install (no marketplace)
+
+If you prefer installing skills directly without the marketplace plugin system, use the included shell script:
+
+```bash
+git clone https://github.com/samkawsarani/sams-product-plugins
+cd sams-product-plugins
+./install-skill.sh commit push create-pr
+```
+
+| Option          | Description                                              |
+| --------------- | -------------------------------------------------------- |
+| `--list`        | List available skills                                    |
+| `--scope SCOPE` | `user` (default, `~/.claude`) or `project` (`./.claude`) |
+| `--all`         | Install all skills                                       |
+| `--force`       | Overwrite existing skills without prompting               |
+| `--help`        | Show usage                                               |
+
 ### Verify
 
 ```bash
