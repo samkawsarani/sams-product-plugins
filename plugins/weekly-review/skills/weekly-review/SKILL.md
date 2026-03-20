@@ -11,7 +11,7 @@ argument-hint: [optional: "quick" for condensed version]
 Before starting, verify dependencies:
 
 1. **MCP task tools (required):** Check if `list_tasks` is available in your tools list.
-   - If **missing**: Tell the user: "Task MCP tools are not configured. This skill requires task management tools (`list_tasks`, `get_task_summary`, `find_stale_tasks`). Please configure the task MCP server and try again." **Stop here.**
+   - If **missing**: Tell the user: "Task MCP tools are not configured. This skill requires task management tools (`list_tasks`, `get_task_summary`, `find_stale_tasks`). Please configure the task MCP server from [sams-product-os](https://github.com/samkawsarani/sams-product-os) and try again." **Stop here.**
 2. **qmd (optional):** Run `command -v qmd`.
    - If **available**: Use `qmd query` for semantic search across knowledge bases.
    - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.

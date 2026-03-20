@@ -121,7 +121,7 @@ plugins/skill-name/
 | Dependency                       | Required by                                                              |
 | -------------------------------- | ------------------------------------------------------------------------ |
 | `qmd` CLI                        | analyze-research, weekly-recap, weekly-review, write-dev-docs, write-doc |
-| MCP task tools                   | daily-pulse, weekly-recap, weekly-review                                 |
+| [MCP task tools](https://github.com/samkawsarani/sams-product-os) | daily-pulse, weekly-recap, weekly-review                                 |
 | `gws` CLI (Google Workspace)     | daily-pulse, write-comms                                                 |
 | `gh` (GitHub CLI)                | create-pr                                                                |
 | `git`                            | commit, create-pr, push                                                  |

@@ -90,9 +90,9 @@ Based on which plugins the user enabled, mention relevant optional dependencies:
 | `qmd` CLI | analyze-research, weekly-recap, weekly-review, write-dev-docs, write-doc | [qmd docs](https://github.com/tobi/qmd) |
 | `gws` CLI (Google Workspace) | daily-pulse, write-comms | [gws docs](https://github.com/googleworkspace/cli) |
 | `gh` (GitHub CLI) | create-pr | `brew install gh` |
+| MCP task tools | daily-pulse, weekly-recap, weekly-review | [sams-product-os](https://github.com/samkawsarani/sams-product-os) |
 | Python 3 | analyze-metrics, build-prototype | `brew install python` |
 | Node.js / `npx` | build-prototype | `brew install node` |
-
 | Granola MCP | sync-granola-meetings | [Granola](https://granola.ai) |
 
 Only mention dependencies for the plugins the user actually enabled. If none of their chosen plugins need external dependencies, skip this step.

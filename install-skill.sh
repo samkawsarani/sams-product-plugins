@@ -111,7 +111,7 @@ print_dep_hints() {
     analyze-research|weekly-recap|weekly-review|write-dev-docs|write-doc)
       echo "    Requires: qmd CLI" ;;
     daily-pulse)
-      echo "    Requires: gws CLI, MCP task tools" ;;
+      echo "    Requires: gws CLI, MCP task tools (https://github.com/samkawsarani/sams-product-os)" ;;
     write-comms)
       echo "    Requires: gws CLI" ;;
     create-pr)
