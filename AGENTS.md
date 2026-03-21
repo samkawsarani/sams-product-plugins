@@ -63,5 +63,4 @@ Before finalizing any plugin:
 - [ ] Triggers documented in description, not body
 - [ ] plugin.json has correct name, description, version, and author
 - [ ] marketplace.json entry has matching version and author
-- [ ] README.md updated: plugin catalog table, enable command, and dependencies (if any)
-- [ ] SETUP.md updated: plugin table, enable command list, and dependencies table (if any)
+- [ ] README.md updated: plugin catalog table and dependencies (if any)

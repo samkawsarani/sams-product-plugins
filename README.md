@@ -7,74 +7,25 @@ My Claude Code setup. A plugin marketplace of Claude Code skills for product man
 
 ## Setup
 
-### Quick Start (automatic)
-
-Paste this into Claude Code and it will walk you through setup interactively — choosing your install method and which plugins to enable:
-
-```
-Go to https://github.com/samkawsarani/sams-product-plugins/blob/main/SETUP.md and set me up.
-```
-
-### Manual Install
-
 **Step 1 — Add the marketplace (choose one):**
 
 ```bash
 # Option A: directly from GitHub (recommended)
-claude plugin add github:samkawsarani/sams-product-plugins
+/plugin marketplace add samkawsarani/sams-product-plugins
 
 # Option B: clone locally first, then add
 git clone https://github.com/samkawsarani/sams-product-plugins <path>
-claude plugin add dir:<path>
+/plugin marketplace add ./path/to/marketplace.json
 ```
 
-**Step 2 — Enable the plugins you want:**
+**Step 2 — Install the plugins you want:**
 
 ```bash
-# If you cloned locally, use: plugin enable <PLUGIN-NAME>@<path>
-claude plugin enable analyze-competitor@sams-product-plugins
-claude plugin enable analyze-metrics@sams-product-plugins
-claude plugin enable analyze-research@sams-product-plugins
-claude plugin enable build-prototype@sams-product-plugins
-claude plugin enable commit@sams-product-plugins
-claude plugin enable create-pr@sams-product-plugins
-claude plugin enable daily-pulse@sams-product-plugins
-claude plugin enable push@sams-product-plugins
-claude plugin enable sync-granola-meetings@sams-product-plugins
-claude plugin enable translate-i18n@sams-product-plugins
-claude plugin enable weekly-recap@sams-product-plugins
-claude plugin enable weekly-review@sams-product-plugins
-claude plugin enable write-comms@sams-product-plugins
-claude plugin enable write-dev-docs@sams-product-plugins
-claude plugin enable write-doc@sams-product-plugins
-claude plugin enable write-ux-copy@sams-product-plugins
+/plugin install {PLUGIN-NAME}@sams-product-plugins
+
+# Example:
+/plugin install analyze-competitor@sams-product-plugins
 ```
-
-### Direct Skill Install (no marketplace)
-
-If you prefer installing skills directly without the marketplace plugin system, use the included shell script:
-
-```bash
-git clone https://github.com/samkawsarani/sams-product-plugins
-cd sams-product-plugins
-./install-skill.sh commit push create-pr
-```
-
-| Option          | Description                                              |
-| --------------- | -------------------------------------------------------- |
-| `--list`        | List available skills                                    |
-| `--scope SCOPE` | `user` (default, `~/.claude`) or `project` (`./.claude`) |
-| `--all`         | Install all skills                                       |
-| `--force`       | Overwrite existing skills without prompting               |
-| `--help`        | Show usage                                               |
-
-### Verify
-
-```bash
-claude plugin list
-```
-
-You should see the marketplace and all enabled plugins listed.
 
 ## Structure
 
