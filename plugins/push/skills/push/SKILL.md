@@ -4,6 +4,7 @@ description: Pushes current branch to remote repository with upstream tracking a
 disable-model-invocation: true
 allowed-tools: Bash(git *)
 argument-hint: [optional flags like --force]
+compatibility: "Requires git CLI."
 ---
 
 ## Context

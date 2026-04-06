@@ -2,6 +2,7 @@
 name: analyze-research
 model: opus
 description: Analyzes user interviews, research transcripts, and feedback to extract themes, generate insights, create personas, and synthesize findings into actionable reports. Invoked when asked to analyze interviews, synthesize research, identify pain points, produce research synthesis, or when user says "what did users say about X", "summarize research on Y", or shares interview notes.
+compatibility: "qmd CLI optional for semantic search."
 ---
 
 ## Dependency Check

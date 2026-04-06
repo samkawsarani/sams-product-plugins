@@ -4,6 +4,7 @@ description: Creates a pull request for the current branch with comprehensive su
 disable-model-invocation: true
 allowed-tools: Bash(git *), Bash(gh pr create:*)
 argument-hint: [optional PR title]
+compatibility: "Requires git and gh CLIs."
 ---
 
 ## Dependency Check

@@ -1,7 +1,7 @@
 {
   "name": "daily-pulse",
   "description": "Morning briefing combining calendar agenda with task priorities",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": {
     "name": "Sam Kawsarani",
     "email": "contact@samkawsarani.com"

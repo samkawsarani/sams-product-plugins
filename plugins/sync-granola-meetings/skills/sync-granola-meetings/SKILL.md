@@ -3,6 +3,7 @@ name: sync-granola-meetings
 description: Sync Granola meetings to local meetings folder. Invoked when user asks to sync meetings, pull transcripts, or says "sync my meetings", "pull today's meetings", "what meetings did I have".
 allowed-tools: mcp__granola__list_meetings, mcp__granola__get_meetings, mcp__granola__get_meeting_transcript, Read, Write, Glob, Bash
 argument-hint: "[folder-name] [--days N] [--all]"
+compatibility: "Requires Granola MCP."
 ---
 
 ## Dependency Check

@@ -4,6 +4,7 @@ description: Creates conventional commits with emoji prefixes, smart commit spli
 disable-model-invocation: true
 allowed-tools: Bash(git *)
 argument-hint: [optional commit message]
+compatibility: "Requires git CLI."
 ---
 
 ## Context

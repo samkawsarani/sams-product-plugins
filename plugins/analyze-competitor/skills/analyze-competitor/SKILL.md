@@ -2,6 +2,7 @@
 name: analyze-competitor
 model: opus
 description: Analyzes competitors including features, pricing, target customers, strengths, gaps, and market positioning. Handles single-competitor deep dives and multi-competitor parallel research with comparison matrix. Invoked when asked to research, analyze, or compare against competitors, when user mentions a competitor by name, or says "how does X compare" or "research competitor Y".
+compatibility: "Requires Notion MCP."
 ---
 
 ## Dependency Check

@@ -1,7 +1,7 @@
 {
   "name": "sync-granola-meetings",
   "description": "Sync Granola meetings to local meetings folder with transcripts and metadata",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Sam Kawsarani",
     "email": "contact@samkawsarani.com"
