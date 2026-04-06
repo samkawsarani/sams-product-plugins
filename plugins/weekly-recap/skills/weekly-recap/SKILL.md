@@ -3,7 +3,7 @@ name: weekly-recap
 model: sonnet
 description: Generates an exec-ready weekly recap structured around key initiatives for sharing with manager and execs. Pulls from tasks, transcripts, and goals. Invoked via /weekly-recap or "write my weekly update", "write my update for leadership". Supports "quick", "slack" modes.
 allowed-tools: list_tasks, get_task_summary, find_stale_tasks, Glob, Read, Bash(qmd:*)
-argument-hint: [optional: "quick" for condensed, "slack" for Slack-optimized]
+argument-hint: '[optional: "quick" for condensed, "slack" for Slack-optimized]'
 compatibility: "Requires Task MCP. qmd CLI optional for semantic search."
 ---
 
