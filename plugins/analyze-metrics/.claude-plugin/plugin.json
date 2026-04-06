@@ -1,7 +1,7 @@
 {
   "name": "analyze-metrics",
   "description": "Product metrics analysis for usage, adoption, conversion, retention, and revenue data",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": {
     "name": "Sam Kawsarani",
     "email": "contact@samkawsarani.com"

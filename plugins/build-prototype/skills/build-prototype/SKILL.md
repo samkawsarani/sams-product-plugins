@@ -2,6 +2,7 @@
 name: build-prototype
 model: sonnet
 description: Builds working React/TypeScript prototypes from PRDs, product briefs, or user stories using Shadcn/ui components. Invoked when asked to create prototypes, validate concepts with code, build functional demos from product requirements, or when user says "build me a prototype", "make a demo", or "mock this up in code".
+compatibility: "Requires python3, node, npm, and npx CLIs."
 ---
 
 ## Dependency Check

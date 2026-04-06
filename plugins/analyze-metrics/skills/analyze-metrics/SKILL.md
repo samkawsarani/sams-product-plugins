@@ -2,6 +2,7 @@
 name: analyze-metrics
 model: sonnet
 description: Analyzes product metrics (usage, adoption, conversion, retention, revenue, payments/fintech) and identifies patterns in user behavior. Invoked when asked to interpret metrics, identify trends, assess feature adoption, evaluate funnel performance, or analyze payment data from CSV/Excel exports, SQL results, or analytics dashboards. Also triggers on "how are we doing on X", "what do the numbers show", or when user shares a CSV or dashboard.
+compatibility: "Requires python3 CLI."
 ---
 
 ## Dependency Check

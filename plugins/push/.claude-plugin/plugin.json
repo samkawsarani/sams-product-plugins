@@ -1,7 +1,7 @@
 {
   "name": "push",
   "description": "Push to remote with upstream tracking and force-push safety checks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Sam Kawsarani",
     "email": "contact@samkawsarani.com"

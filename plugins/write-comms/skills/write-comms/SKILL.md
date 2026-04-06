@@ -2,6 +2,7 @@
 name: write-comms
 model: sonnet
 description: Generates internal communications (3P updates, stakeholder reports, newsletters, FAQs, incident reports) in company-preferred formats. Invoked when asked to write status reports, leadership updates, project updates, or any internal communication. Also triggers on "write a status update", "draft an email to leadership", or "I need a 3P update".
+compatibility: "Requires Slack MCP, Linear MCP, Google Drive MCP, and gws CLI."
 ---
 
 ## Dependency Check
