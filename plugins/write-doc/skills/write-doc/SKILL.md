@@ -2,7 +2,7 @@
 name: write-doc
 model: sonnet
 description: Generates PM documents (PRDs, specs, briefs, user stories, decision docs) from templates and knowledge base context. Supports two modes — auto-generate for immediate first drafts, or co-authoring for guided iterative writing. Invoked when asked to write, generate, or co-author product documents, or when user says "help me write a PRD", "draft a spec for X", or "I need a brief on Y".
-argument-hint: [doc-type] [name] — types: prd, brief, spec, user-stories, decision
+argument-hint: '[doc-type] [name] — types: prd, brief, spec, user-stories, decision'
 compatibility: "qmd CLI optional for semantic search."
 ---
 

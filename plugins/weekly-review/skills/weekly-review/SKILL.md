@@ -3,7 +3,7 @@ name: weekly-review
 model: sonnet
 description: Reviews the past week, checks goal progress, identifies blockers and stalled work, and plans next week's priorities. Internal reflection tool. Invoked via /weekly-review or "review my week", "plan next week", or "what did I accomplish this week".
 allowed-tools: list_tasks, get_task_summary, find_stale_tasks, Glob, Read, Bash(qmd:*)
-argument-hint: [optional: "quick" for condensed version]
+argument-hint: '[optional: "quick" for condensed version]'
 compatibility: "Requires Task MCP. qmd CLI optional for semantic search."
 ---
 

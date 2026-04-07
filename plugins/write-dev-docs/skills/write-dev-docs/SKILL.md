@@ -2,7 +2,7 @@
 name: write-dev-docs
 model: sonnet
 description: Generates best-in-class developer documentation (API references, integration guides, code recipes, Postman collections) from OpenAPI specs, code, natural language, or PRDs. Stripe-quality output. Invoked when asked to write API docs, developer guides, code samples, quickstarts, Postman collections, or when user says "document this API", "write a quickstart for X", or "create a Postman collection".
-argument-hint: [doc-type] [name] — types: api-reference, guide, recipe, postman
+argument-hint: '[doc-type] [name] — types: api-reference, guide, recipe, postman'
 compatibility: "qmd CLI optional for semantic search."
 ---
 
