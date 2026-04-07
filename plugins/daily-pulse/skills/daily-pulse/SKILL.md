@@ -1,7 +1,7 @@
 ---
 name: daily-pulse
 model: haiku
-description: Generates a morning briefing combining calendar agenda with task priorities and goal alignment. Invoked via /daily-pulse or "morning pulse", "what's my day look like". Supports variations: tomorrow, week.
+description: Generates a morning briefing combining calendar agenda with task priorities and goal alignment. Invoked via /daily-pulse or "morning pulse", "what's my day look like". Supports variations (tomorrow, week).
 allowed-tools: list_tasks, find_overdue_tasks, get_task_summary, Glob, Read, Bash
 argument-hint: '[optional: "tomorrow", "week"]'
 compatibility: "Requires Task MCP and gws CLI."
