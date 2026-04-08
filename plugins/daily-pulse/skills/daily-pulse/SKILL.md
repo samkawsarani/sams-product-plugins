@@ -2,26 +2,12 @@
 name: daily-pulse
 model: haiku
 description: Generates a morning briefing combining calendar agenda with task priorities and goal alignment. Invoked via /daily-pulse or "morning pulse", "what's my day look like". Supports variations (tomorrow, week).
-allowed-tools: list_tasks, find_overdue_tasks, get_task_summary, Glob, Read, Bash
 argument-hint: '[optional: "tomorrow", "week"]'
-compatibility: "Requires Task MCP and gws CLI."
----
-
-## Dependency Check
-
-Before starting, verify required dependencies:
-
-1. **gws CLI (required):** Run `command -v gws`.
-   - If **missing**: Tell the user: "The `gws` CLI is required to fetch calendar data. See https://github.com/googleworkspace/cli for installation, then try again." **Stop here.**
-2. **MCP task tools (required):** Check if `list_tasks` is available in your tools list.
-   - If **missing**: Tell the user: "Task MCP tools are not configured. This skill requires task management tools (`list_tasks`, `find_overdue_tasks`). Please configure the task MCP server from [sams-product-os](https://github.com/samkawsarani/sams-product-os) and try again." **Stop here.**
-
 ---
 
 ## Context
 
-Tasks are in `tasks/` with YAML frontmatter (priority, status, due_date, category).
-Goals are in `GOALS.md`.
+Find task and goal context from the project.
 Today's date: $TODAY
 Arguments: `$ARGUMENTS` (optional — see variations: tomorrow, week)
 
@@ -42,14 +28,8 @@ If user provided arguments: $ARGUMENTS
 ### Step 1: Calendar Agenda
 
 **Actions:**
-1. Fetch today's calendar agenda:
-   ```bash
-   gws calendar +agenda --today
-   ```
-2. Optionally fetch tomorrow for look-ahead context:
-   ```bash
-   gws calendar +agenda --tomorrow
-   ```
+1. Fetch today's calendar agenda using available calendar tools.
+2. Optionally fetch tomorrow for look-ahead context.
 3. Filter out **multi-day all-day events** (where the event spans more than one day). Single-day all-day events can be shown as context above the table.
 4. Parse the results and present as a **table** with columns: Time, Event
    - For events where you are marked as **optional**, append `*(you're optional)*` to the event name in italics
@@ -63,15 +43,10 @@ If user provided arguments: $ARGUMENTS
 ### Step 2: Task Priorities
 
 **Actions:**
-1. Use `find_overdue_tasks` MCP tool to get overdue tasks
-2. Use `list_tasks` MCP tool to get:
-   - P0 tasks (not done)
-   - P1 tasks (not done)
-   - Tasks with due dates today
-   - Tasks due in the next 7 days
-   - Unscheduled P0/P1 tasks (no due_date set)
-3. Read `GOALS.md` for goal context
-4. Find blocked tasks (status `b`) and identify if any can be unblocked today
+1. Find overdue tasks
+2. Find P0 and P1 tasks (not done), tasks due today, tasks due in the next 7 days, and unscheduled P0/P1 tasks
+3. Find goal context from the project
+4. Find blocked tasks and identify if any can be unblocked today
 
 ### Step 3: Synthesize
 
@@ -98,7 +73,7 @@ A few things to note:
 
 TOP PRIORITIES
 1. [Task with context]
-   Goal: [Goal name from GOALS.md]
+   Goal: [Goal name]
    Why today: [Urgency/impact]
 
 2. [Second priority]
@@ -149,10 +124,7 @@ Ready to start?
 **When to use:** User passes "tomorrow" argument
 
 **Actions:**
-1. Fetch tomorrow's calendar agenda:
-   ```bash
-   gws calendar +agenda --tomorrow
-   ```
+1. Fetch tomorrow's calendar agenda using available calendar tools.
 2. Filter out multi-day all-day events.
 2. Present events as a **table** (same format as default pulse, with *(you're optional)* on optional events)
 3. Add **"A few things to note:"** section with bullets for free blocks, cancellations/declines, back-to-back stretches, and conflicts
@@ -166,13 +138,10 @@ Ready to start?
 **When to use:** User passes "week" argument
 
 **Actions:**
-1. Fetch next 7 days of events:
-   ```bash
-   gws calendar +agenda --week
-   ```
+1. Fetch the next 7 days of calendar events using available calendar tools.
 2. Filter out multi-day all-day events.
-2. Summarize per-day: meeting count, total meeting time
-3. Show tasks due this week from `tasks/`
+3. Summarize per-day: meeting count, total meeting time
+4. Find tasks due this week
 
 **Output format:**
 ```

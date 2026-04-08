@@ -12,7 +12,7 @@ Before starting, check optional dependencies:
 
 1. **qmd (optional):** Run `command -v qmd`.
    - If **available**: Use `qmd query` for semantic search across knowledge bases — this gives the best results.
-   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
+   - If **missing**: Fall back to `Grep` and `Glob` for keyword search. Note to the user that `qmd` would improve search quality, but proceed without it.
 
 ---
 
@@ -80,7 +80,7 @@ The workflow adapts based on what the user provides:
 |--------|-----------|-------------------|
 | **OpenAPI/Swagger spec** | User provides `.yaml`/`.json` file or URL | Parse spec → extract endpoints, schemas, auth → generate structured docs |
 | **Existing code/routes** | User points to route files, controllers, or handlers | Infer API contracts from code → extract params, responses, middleware → document |
-| **Natural language + knowledge base** | User describes the API verbally | Pull from `initiatives/`, `knowledge/` → construct API docs from requirements and context |
+| **Natural language description** | User describes the API verbally | Gather relevant context from the project → construct API docs from requirements and context |
 | **PRD/technical spec** | User references a spec or initiative file | Extract API requirements, resource models, error codes → generate developer-facing docs |
 
 ## Core Workflow
@@ -104,22 +104,14 @@ If doc type is ambiguous, ask the user. If input source is unclear, ask what the
    - OpenAPI specs, code files, PRDs, or natural language description
    - Any existing documentation to build on or replace
 
-2. **Initiative and API context**:
-   - Search `initiatives/` for files related to the API or resource being documented
-   - `knowledge/references/` — API standards, conventions, and strategic context
-
-3. **Goals and strategy**:
-   - `GOALS.md` — Check for goals related to developer experience or this API
-   - `knowledge/product-strategy/` — Product vision relevant to the API
-   - `knowledge/processes/` — Technical standards and release processes
-
-4. **Tasks and decisions**:
-   - `tasks/` — Related developer experience tasks
-   - Look for prior decisions on API design, naming, versioning
+2. **Supplementary project context** (if available):
+   - API standards, naming conventions, and strategic context from the project
+   - Goals related to developer experience or this API
+   - Technical standards, release processes, and prior API design decisions
 
 **Context gathering approach:**
 - Use Glob and Grep to find relevant files — don't read everything
-- Use `qmd query` for semantic search across knowledge base
+- Use `qmd query` for semantic search if available
 - Focus on API contracts, resource models, and error definitions
 - If user references specific files with @ mentions, prioritize those
 
@@ -325,4 +317,4 @@ Format references are in `references/`:
 - `references/code-recipe-format.md` — Per-language code sample conventions
 - `references/postman-format.md` — Collection architecture and test script rules
 
-Templates are used as structure but never modified. Generated documents are saved to user's preferred location (typically `initiatives/` or current directory).
+Templates are used as structure but never modified. Generated documents are saved to the user's preferred location.

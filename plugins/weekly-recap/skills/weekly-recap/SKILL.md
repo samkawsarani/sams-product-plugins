@@ -2,21 +2,7 @@
 name: weekly-recap
 model: sonnet
 description: Generates an exec-ready weekly recap structured around key initiatives for sharing with manager and execs. Pulls from tasks, transcripts, and goals. Invoked via /weekly-recap or "write my weekly update", "write my update for leadership". Supports "quick", "slack" modes.
-allowed-tools: list_tasks, get_task_summary, find_stale_tasks, Glob, Read, Bash(qmd:*)
 argument-hint: '[optional: "quick" for condensed, "slack" for Slack-optimized]'
-compatibility: "Requires Task MCP. qmd CLI optional for semantic search."
----
-
-## Dependency Check
-
-Before starting, verify dependencies:
-
-1. **MCP task tools (required):** Check if `list_tasks` is available in your tools list.
-   - If **missing**: Tell the user: "Task MCP tools are not configured. This skill requires task management tools (`list_tasks`, `get_task_summary`, `find_stale_tasks`). Please configure the task MCP server from [sams-product-os](https://github.com/samkawsarani/sams-product-os) and try again." **Stop here.**
-2. **qmd (optional):** Run `command -v qmd`.
-   - If **available**: Use `qmd query` for semantic search across knowledge bases.
-   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
-
 ---
 
 # Weekly Recap Generator
@@ -27,14 +13,12 @@ Generate a polished, exec-ready weekly recap structured around key initiatives. 
 
 - **Report Date**: $TODAY
 - **Arguments**: $ARGUMENTS
-- Tasks are in `tasks/` with YAML frontmatter (priority, status, due_date, category).
-- Goals are in `GOALS.md`.
-- Transcripts are in `meetings/` with YYYY-MM-DD date prefixes.
-- Initiatives are in `initiatives/`.
-- Voice guide for exec tone is in `VOICE-GUIDE.md`.
+- Find task and goal context from the project.
+- Find meeting transcripts from this week.
+- Find initiative context and voice/tone guidance from the project.
 **Audience:** Manager and execs — people with some but not deep context on your day-to-day work.
 
-**Tone:** Professional but warm. Heavy on structure and scannability. Concise with clear action items. Follow the exec audience tone from `VOICE-GUIDE.md` — no corporate jargon, no hedging, get to the point.
+**Tone:** Professional but warm. Heavy on structure and scannability. Concise with clear action items. Follow exec audience tone guidance from the project — no corporate jargon, no hedging, get to the point.
 
 **Recommended timing:**
 - Friday afternoon (while the week is fresh)
@@ -66,7 +50,7 @@ Determine the reporting period before collecting any data.
 ### Step 1: Find This Week's Transcripts
 
 **Actions:**
-1. Use Glob to find files in `meetings/` with date prefixes within the date range from Step 0
+1. Find meeting transcripts from within the date range from Step 0
 2. **Token optimization**: Read transcript summaries/headers first. Only deep-read transcripts that are relevant to active initiatives or contain decision keywords.
 3. Cap transcript reading at 5 most recent if volume is high.
 4. From relevant transcripts, extract:
@@ -81,18 +65,14 @@ Determine the reporting period before collecting any data.
 
 ### Step 2: Review Completed and In-Progress Work
 
-**Use MCP tools first, with file fallback.**
+**Actions:**
+1. Find tasks completed this week
+2. Find tasks currently in progress
+3. Find blocked tasks
+4. Identify stale tasks (started but not updated recently)
+5. Group tasks by goal alignment
 
-**Actions (MCP-first):**
-1. Call `get_task_summary` for an overview of task counts by priority, status, and category
-2. Call `list_tasks` with status `d` to get tasks completed this week
-3. Call `list_tasks` with status `s` to get tasks currently in progress
-4. Call `list_tasks` with status `b` to get blocked tasks
-5. Call `find_stale_tasks` to identify started tasks that haven't been updated recently
-
-**Fallback:** If MCP tools are unavailable, use Glob to list `tasks/*.md` and Read each file to check YAML frontmatter for status/priority.
-
-6. Group all tasks by goal alignment (reference `GOALS.md`)
+Use whatever task tools or files are available in the project.
 
 **Do not output this step directly — it feeds into Step 3.**
 
@@ -101,10 +81,10 @@ Determine the reporting period before collecting any data.
 ## Step 3: Assess Initiative Progress
 
 **Actions:**
-1. Read `GOALS.md`
-2. Read `VOICE-GUIDE.md` for exec audience tone guidelines. Apply these to all output sections.
-3. Read any files in `initiatives/` for additional context
-   - **Token optimization**: Skip initiative files if `GOALS.md` provides sufficient context for that initiative
+1. Find and read goal context from the project
+2. Find and apply any voice/tone guidance for exec audience. Apply to all output sections.
+3. Find initiative context from the project
+   - **Token optimization**: Skip initiative files if goal context provides sufficient information
 4. For each active goal/initiative, combine task data (Step 2) with transcript insights (Step 1) to assess:
    - What shipped or moved forward this week
    - Current status: On Track, At Risk, or Blocked
@@ -193,8 +173,8 @@ Before presenting the final recap, verify:
 - [ ] Every active initiative is accounted for (covered or explicitly skipped with reason)
 - [ ] Date range in header matches the actual period covered (from Step 0)
 - [ ] Transcript insights are attributed (which meeting, which date)
-- [ ] "Next Week Focus" items align with GOALS.md priorities
-- [ ] Voice matches VOICE-GUIDE.md exec tone (no jargon, no hedging)
+- [ ] "Next Week Focus" items align with project goals
+- [ ] Voice matches exec tone guidance (no jargon, no hedging)
 - [ ] TL;DR leads with the headline, not a summary of activity
 - [ ] Stale tasks are flagged if any exist
 
@@ -235,9 +215,9 @@ If user passed "slack" argument, format for Slack posting:
 |----------|--------|
 | No transcripts this week | Proceed with task/goal data only, note "No meeting transcripts for this period" in output |
 | No completed tasks | Focus on in-progress and blocked items, note in TL;DR |
-| No active goals in GOALS.md | Flag to user, generate task-based recap instead of initiative-based |
-| Initiative file missing/empty | Use goal description from GOALS.md as fallback context |
-| MCP task tools unavailable | Fall back to Glob + Read on `tasks/` directory |
+| No active goals found | Flag to user, generate task-based recap instead of initiative-based |
+| Initiative file missing/empty | Use available goal description as fallback context |
+| No task data found | Ask the user to summarize completed work directly |
 | Stale tasks found | Include in Risks and Blockers section with recommendation |
 
 ---
@@ -249,7 +229,7 @@ If user passed "slack" argument, format for Slack posting:
 - Be honest about status — flag At Risk or Blocked early, don't hide problems
 - Keep it scannable — headers, bold, bullets. No walls of text
 - Only include Customer and Merchant Signals if there's something genuinely worth surfacing
-- Match the voice guide: direct, structured, no jargon, action-oriented
+- Match voice/tone guidance: direct, structured, no jargon, action-oriented
 - Aim for a 2-3 minute read (full version) or 30-second scan (quick version)
 
 ---
@@ -257,7 +237,5 @@ If user passed "slack" argument, format for Slack posting:
 ## Token Optimization Notes
 
 - Read transcript summaries/headers first, only deep-read relevant ones
-- Skip initiative files if GOALS.md provides sufficient context
+- Skip initiative files if goal context provides sufficient information
 - Cap transcript reading at 5 most recent if volume is high
-- Use MCP `get_task_summary` for counts instead of reading every task file
-- Use MCP `list_tasks` with status filters instead of reading all tasks and filtering manually

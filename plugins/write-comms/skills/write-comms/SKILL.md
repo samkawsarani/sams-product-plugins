@@ -55,7 +55,7 @@ Before writing any communication:
    - Target audience
    - Time period covered
    - Desired tone (if not standard)
-4. **Check voice guide** — Read `VOICE-GUIDE.md` (project root) for tone and style preferences
+4. **Check voice guide** — Check for a voice/style guide if one exists in the project
 
 ### 2. Pull Information from Sources
 
@@ -67,7 +67,7 @@ Search available tools for relevant content:
 | **Linear** | Completed issues, milestones, blockers, in-progress work |
 | **Google Calendar (gws)** | Non-recurring meetings, all-hands, product reviews, large attendee events — use `gws calendar +agenda` |
 | **Google Drive** | Recently published docs with high visibility, vision docs, quarterly plans |
-| **Knowledge base** | `knowledge/product-strategy/` for strategic context, `tasks/` for current work |
+| **Project files** | Strategic context and current work from the project (if relevant) |
 
 If sources are unavailable, ask the user for the key information needed.
 
@@ -90,7 +90,7 @@ If sources are unavailable, ask the user for the key information needed.
 Before presenting the draft, verify:
 
 - [ ] Correct format matches the reference file template
-- [ ] Tone matches `VOICE-GUIDE.md` preferences
+- [ ] Tone matches voice/style guide (if available)
 - [ ] Appropriate length for the communication type
 - [ ] Metrics and data are specific, not vague
 - [ ] Asks and decisions are clearly called out

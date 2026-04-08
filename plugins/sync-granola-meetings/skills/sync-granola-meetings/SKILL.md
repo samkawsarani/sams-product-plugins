@@ -15,14 +15,13 @@ Before starting, verify required dependencies:
 
 ## Context
 
-Meetings live in `meetings/` as markdown files with YAML frontmatter.
-Sync state is tracked in `meetings/.synced-meetings.json`.
+Sync state is tracked in `<target-folder>/.synced-meetings.json`.
 Today's date: $TODAY
 Arguments: `$ARGUMENTS`
 
 ## Your Task
 
-Sync Granola meetings to the local `meetings/` folder using the Granola MCP.
+Sync Granola meetings to `<target-folder>` using the Granola MCP.
 
 ---
 
@@ -34,7 +33,7 @@ Sync Granola meetings to the local `meetings/` folder using the Granola MCP.
 
 ## Step 2: Check Sync State
 
-Read `meetings/.synced-meetings.json`. If it doesn't exist, this is a first sync.
+Read `<target-folder>/.synced-meetings.json`. If it doesn't exist, this is a first sync.
 
 ```json
 {
@@ -139,7 +138,7 @@ tags:
 - Skip the note creator (the user themselves) from tags
 
 ### 6e. Update Sync State
-After each successful write, update `meetings/.synced-meetings.json`:
+After each successful write, update `<target-folder>/.synced-meetings.json`:
 - Add the meeting ID to `synced` with title, synced_at timestamp, and file_path
 - Update `last_sync` to current timestamp
 

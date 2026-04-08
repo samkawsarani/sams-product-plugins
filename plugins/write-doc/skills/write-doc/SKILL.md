@@ -12,7 +12,7 @@ Before starting, check optional dependencies:
 
 1. **qmd (optional):** Run `command -v qmd`.
    - If **available**: Use `qmd query` for semantic search across knowledge bases — this gives the best results.
-   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
+   - If **missing**: Fall back to `Grep` and `Glob` for keyword search. Note to the user that `qmd` would improve search quality, but proceed without it.
 
 ---
 
@@ -88,36 +88,23 @@ If document type is ambiguous, ask the user which type they need using the table
 
 ### Step 2: Gather Context
 
-**Always pull information from these sources (in order of priority):**
+**Pull relevant context from the project (in order of priority):**
 
-1. **Existing related documents**:
-   - Check `initiatives/` for related strategic opportunities and initiatives
-   - Look for existing specs/briefs/initiatives
-   - Look for related PRDs, specs, or briefs that might provide context
+1. **Existing related documents**: Find related initiatives, specs, PRDs, or briefs in the project that provide relevant context.
 
-2. **Product strategy and frameworks**:
-   - `knowledge/product-strategy/` - Product vision, roadmap, strategic pillars
-   - `knowledge/frameworks/` - PM frameworks and methodologies to apply
-   - `knowledge/company-context/` - Company vision, mission, values
+2. **Product strategy and frameworks**: Find product vision, roadmap, strategic pillars, PM frameworks, and company context.
 
-3. **User research**:
-   - `meetings/` - User interviews, stakeholder meetings
-   - Look for relevant user insights, pain points, quotes
+3. **User research**: Find user interviews, stakeholder meeting notes, relevant insights, pain points, and quotes.
 
-4. **Writing style**:
-   - `knowledge/voice-samples/` - Match writing tone and style
-   - `knowledge/about-me/` - Personal preferences and communication style
+4. **Writing style**: Find voice/tone samples and writing style guides if they exist in the project.
 
-5. **Process and standards**:
-   - `knowledge/processes/` - Team rituals, decision-making frameworks
-   - `knowledge/product-analytics/` - Current metrics, KPIs (if available)
+5. **Process and standards**: Find team rituals, decision-making frameworks, and current metrics/KPIs if available.
 
 **Context gathering approach:**
-- Use `qmd query "topic"` for semantic search across knowledge/, meetings/, and initiatives/ (best for open-ended context gathering)
-- Use `qmd search "keyword"` for exact term lookups
-- Use Glob/Grep only for known file patterns or after qmd narrows the search space
+- Use `qmd query "topic"` for semantic search if available (best for open-ended context gathering)
+- Use Glob/Grep for keyword and pattern search
 - Focus on recent and relevant documents
-- Prioritize quality over quantity - better to deeply understand 2-3 key docs than skim 20
+- Prioritize quality over quantity — better to deeply understand 2-3 key docs than skim 20
 - If user references specific files with @ mentions, prioritize those
 
 ### Step 3: Select Template
@@ -190,9 +177,6 @@ Then iterate based on user feedback. After each round of revisions, re-validate 
 6. **Add evidence**: Support claims with user research, data, or market insights
 7. **Consider cross-functional needs**: Marketing, sales, support, legal
 
-**Context sources for PRDs:**
-- Primary: `initiatives/`
-- Supporting: `knowledge/product-strategy/`, `meetings/`, `knowledge/product-analytics/`
 
 ## Brief Generation
 
@@ -316,7 +300,7 @@ Then iterate based on user feedback. After each round of revisions, re-validate 
 4. **Explicit tradeoffs**: What we're giving up by choosing this
 5. **Measurable success**: How we'll know this was the right call
 6. **Owner assignment**: Who's responsible for implementation
-7. **Save location**: Typically `initiatives/` or `initiatives/`
+7. **Save location**: Ask the user for their preferred location, or save to the current directory.
 
 **Decision doc workflow:**
 1. Capture the decision made
@@ -348,7 +332,7 @@ Before presenting any generated document, verify:
 ### Generate from Opportunities
 
 When user says "create a PRD/spec from [opportunity]":
-1. Read the opportunity or initiative file from `initiatives/`
+1. Read the opportunity or initiative file from the project
 2. Extract key context: problem, target users, strategic value
 3. Expand into full PRD/spec structure
 4. Link back to original opportunity for traceability
@@ -356,7 +340,7 @@ When user says "create a PRD/spec from [opportunity]":
 ### Generate from Initiatives
 
 When user references an initiative file:
-1. Read the initiative from `initiatives/` or wherever stored
+1. Read the initiative from the project
 2. Use as primary source of truth for context
 3. Expand into requested document type
 4. Maintain consistency with initiative content
@@ -388,4 +372,4 @@ All templates are in this skill's `assets/` directory (NOT root `/templates/`):
 
 **Note**: Root `/templates/` directory contains user-facing templates for voice samples, frameworks, and general PM templates.
 
-Templates are used as structure but never modified. Generated documents are saved to user's preferred location (typically `initiatives/` or current directory).
+Templates are used as structure but never modified. Generated documents are saved to the user's preferred location.

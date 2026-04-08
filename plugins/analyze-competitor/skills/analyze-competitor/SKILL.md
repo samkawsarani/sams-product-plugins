@@ -2,15 +2,14 @@
 name: analyze-competitor
 model: opus
 description: Analyzes competitors including features, pricing, target customers, strengths, gaps, and market positioning. Handles single-competitor deep dives and multi-competitor parallel research with comparison matrix. Invoked when asked to research, analyze, or compare against competitors, when user mentions a competitor by name, or says "how does X compare" or "research competitor Y".
-compatibility: "Requires Notion MCP."
+compatibility: "Notion MCP optional for internal research."
 ---
 
 ## Dependency Check
 
-Before starting, verify required dependencies:
-
-1. **Notion MCP (required):** Check if `Notion:notion-search` is available in your tools list.
-   - If **missing**: Tell the user: "The Notion MCP server is not configured. This skill requires Notion access to search for competitor research. Please configure the Notion MCP server and try again." **Stop here.**
+1. **Notion MCP (optional):** Check if `Notion:notion-search` is available in your tools list.
+   - If **available**: Use it to search for internal competitor research.
+   - If **missing**: Skip Notion search and proceed with other sources.
 
 ---
 
@@ -31,10 +30,10 @@ Perform comprehensive competitive analysis of a single competitor, gathering int
 
 This skill analyzes ONE competitor at a time. For analyzing multiple competitors in parallel, pass multiple competitor names.
 
-**Output**: Structured markdown report saved to `knowledge/references/competitor-[NAME]-comparison.md`
+**Output**: Structured markdown report saved to `competitor-[NAME]-comparison.md` (or user-specified location)
 
 **Data sources** (in priority order):
-1. Knowledge base files (knowledge/references/, meetings/)
+1. Project files (existing research, transcripts, context files)
 2. Notion workspace (if MCP available)
 3. Web search (pricing pages, reviews, testimonials)
 4. User-provided sources
@@ -52,11 +51,11 @@ Gather essential information:
 - Website URL (or prompt user if not provided)
 
 **Optional**:
-- Our product context from `knowledge/references/product-info.md` (for comparison)
+- Our product context (look for a product context file in the project)
 - Specific focus areas (e.g., "focus on pricing" or "analyze their enterprise features")
-- Output location (default: `knowledge/references/competitor-[name]-comparison.md`)
+- Output location (default: `competitor-[name]-comparison.md`)
 
-**If product-info.md exists**: Read it to understand our product for comparison purposes.
+**If a product context file exists in the project**: Read it to understand our product for comparison purposes.
 
 ---
 
@@ -64,11 +63,11 @@ Gather essential information:
 
 Follow this prioritized approach to gather comprehensive competitive intelligence:
 
-#### Source 1: Knowledge Base (Check First)
-- Use `Glob` to search for existing research: `knowledge/references/*[competitor-name]*.md`
-- Use `Glob` to find transcripts: `meetings/*[competitor-name]*.md`
-- Use `Read` to load any existing research notes
-- **Why first**: User-provided research is most reliable and contextual
+#### Source 1: Project Files (Check First)
+- Search the project for existing research mentioning the competitor
+- Search for transcripts or notes mentioning the competitor
+- Use `Read` to load any existing research notes found
+- **Why first**: Existing internal research is most reliable and contextual
 
 #### Source 2: Notion Workspace (If Available)
 - Check if Notion MCP tools are available
@@ -278,7 +277,7 @@ If any category has no data, include it in the report with "No information found
 
 ### Step 6: Save Output
 
-**Default location**: `knowledge/references/competitor-[name]-comparison.md`
+**Default location**: `competitor-[name]-comparison.md` in the project root, or ask the user for preferred location
 - Normalize name to lowercase-with-hyphens
 - Example: "Stripe" → `competitor-stripe-comparison.md`
 
@@ -372,17 +371,17 @@ For detailed guidance during research:
 Orchestrates research across multiple competitors in parallel and synthesizes into a comparison matrix.
 
 **Outputs**:
-- Individual reports: `knowledge/references/competitor-[name]-comparison.md`
-- Comparison matrix: `knowledge/references/competitor-comparison-matrix-YYYY-MM-DD.md`
+- Individual reports: `competitor-[name]-comparison.md` (project root or user-specified location)
+- Comparison matrix: `competitor-comparison-matrix-YYYY-MM-DD.md` (project root or user-specified location)
 
 ### Step 1: Identify Competitors
 
 Check in this order:
-1. **File**: Use Glob to check for `knowledge/references/competitors.md` → parse competitor list
+1. **File**: Search the project for a competitors list file → parse competitor list
 2. **Arguments**: Parse `$ARGUMENTS` for comma-separated names/URLs
 3. **Prompt**: If neither exists, ask user for competitor list
 
-Also check for `knowledge/references/product-info.md` for comparison context.
+Also search the project for a product context file for comparison context.
 
 ### Step 2: Invoke Parallel Research
 
