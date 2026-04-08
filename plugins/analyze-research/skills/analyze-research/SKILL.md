@@ -34,7 +34,7 @@ Clarify what type of analysis is needed:
 
 Determine the source materials:
 - Location of transcripts (ask the user if not provided)
-- Related project files — initiatives, specs, or prior research
+- Related files — initiatives, specs, or prior research
 - Timeframe or specific interviews to analyze
 
 Find relevant transcripts and documents using available search tools.
@@ -133,7 +133,7 @@ Use the template at `assets/synthesis-report-template.md` when creating comprehe
 - Recommendations (immediate, short-term, long-term)
 - Open questions and next steps
 
-Save synthesis reports alongside related project files, or ask the user where to save.
+Save synthesis reports alongside related files, or ask the user where to save.
 
 #### Insight Cards (Quick Summaries)
 
@@ -146,7 +146,7 @@ Use the template at `assets/insight-card-template.md` for stakeholder-friendly s
 - Why it matters
 - Recommended action
 
-Save insight cards alongside related project files, or ask the user where to save.
+Save insight cards alongside related files, or ask the user where to save.
 
 #### User Personas
 

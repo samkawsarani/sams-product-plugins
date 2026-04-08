@@ -55,7 +55,7 @@ Before writing any communication:
    - Target audience
    - Time period covered
    - Desired tone (if not standard)
-4. **Check voice guide** — Check for a voice/style guide if one exists in the project
+4. **Check voice guide** — Check for a voice/style guide if one exists
 
 ### 2. Pull Information from Sources
 
@@ -67,7 +67,7 @@ Search available tools for relevant content:
 | **Linear** | Completed issues, milestones, blockers, in-progress work |
 | **Google Calendar (gws)** | Non-recurring meetings, all-hands, product reviews, large attendee events — use `gws calendar +agenda` |
 | **Google Drive** | Recently published docs with high visibility, vision docs, quarterly plans |
-| **Project files** | Strategic context and current work from the project (if relevant) |
+| **Other context** | Strategic context and current work (if relevant) |
 
 If sources are unavailable, ask the user for the key information needed.
 

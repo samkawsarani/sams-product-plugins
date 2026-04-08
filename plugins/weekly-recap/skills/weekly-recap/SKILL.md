@@ -13,12 +13,12 @@ Generate a polished, exec-ready weekly recap structured around key initiatives. 
 
 - **Report Date**: $TODAY
 - **Arguments**: $ARGUMENTS
-- Find task and goal context from the project.
+- Find task and goal context.
 - Find meeting transcripts from this week.
-- Find initiative context and voice/tone guidance from the project.
+- Find initiative context and voice/tone guidance.
 **Audience:** Manager and execs — people with some but not deep context on your day-to-day work.
 
-**Tone:** Professional but warm. Heavy on structure and scannability. Concise with clear action items. Follow exec audience tone guidance from the project — no corporate jargon, no hedging, get to the point.
+**Tone:** Professional but warm. Heavy on structure and scannability. Concise with clear action items. Follow exec audience tone guidance if available — no corporate jargon, no hedging, get to the point.
 
 **Recommended timing:**
 - Friday afternoon (while the week is fresh)
@@ -72,7 +72,7 @@ Determine the reporting period before collecting any data.
 4. Identify stale tasks (started but not updated recently)
 5. Group tasks by goal alignment
 
-Use whatever task tools or files are available in the project.
+Use whatever task tools or files are available.
 
 **Do not output this step directly — it feeds into Step 3.**
 
@@ -81,9 +81,9 @@ Use whatever task tools or files are available in the project.
 ## Step 3: Assess Initiative Progress
 
 **Actions:**
-1. Find and read goal context from the project
+1. Find and read goal context
 2. Find and apply any voice/tone guidance for exec audience. Apply to all output sections.
-3. Find initiative context from the project
+3. Find initiative context
    - **Token optimization**: Skip initiative files if goal context provides sufficient information
 4. For each active goal/initiative, combine task data (Step 2) with transcript insights (Step 1) to assess:
    - What shipped or moved forward this week

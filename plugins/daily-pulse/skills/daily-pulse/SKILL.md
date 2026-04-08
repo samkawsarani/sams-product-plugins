@@ -7,7 +7,7 @@ argument-hint: '[optional: "tomorrow", "week"]'
 
 ## Context
 
-Find task and goal context from the project.
+Find task and goal context.
 Today's date: $TODAY
 Arguments: `$ARGUMENTS` (optional — see variations: tomorrow, week)
 
@@ -45,7 +45,7 @@ If user provided arguments: $ARGUMENTS
 **Actions:**
 1. Find overdue tasks
 2. Find P0 and P1 tasks (not done), tasks due today, tasks due in the next 7 days, and unscheduled P0/P1 tasks
-3. Find goal context from the project
+3. Find goal context
 4. Find blocked tasks and identify if any can be unblocked today
 
 ### Step 3: Synthesize

@@ -7,7 +7,7 @@ argument-hint: '[optional: "quick" for condensed version]'
 
 ## Context
 
-Find task and goal context from the project.
+Find task and goal context.
 Today's date: $TODAY
 
 **Recommended timing:**
@@ -49,7 +49,7 @@ If user says "quick" or wants condensed version → Combine all steps into brief
 ## Step 2: Check Goal Progress
 
 **Actions:**
-1. Find and read goals from the project
+1. Find and read goals
 2. For each goal, assess:
    - Tasks completed toward this goal
    - Tasks in progress (status `s`)

@@ -88,15 +88,15 @@ If document type is ambiguous, ask the user which type they need using the table
 
 ### Step 2: Gather Context
 
-**Pull relevant context from the project (in order of priority):**
+**Pull relevant context (in order of priority):**
 
-1. **Existing related documents**: Find related initiatives, specs, PRDs, or briefs in the project that provide relevant context.
+1. **Existing related documents**: Find related initiatives, specs, PRDs, or briefs that provide relevant context.
 
 2. **Product strategy and frameworks**: Find product vision, roadmap, strategic pillars, PM frameworks, and company context.
 
 3. **User research**: Find user interviews, stakeholder meeting notes, relevant insights, pain points, and quotes.
 
-4. **Writing style**: Find voice/tone samples and writing style guides if they exist in the project.
+4. **Writing style**: Find voice/tone samples and writing style guides if available.
 
 5. **Process and standards**: Find team rituals, decision-making frameworks, and current metrics/KPIs if available.
 

@@ -51,11 +51,11 @@ Gather essential information:
 - Website URL (or prompt user if not provided)
 
 **Optional**:
-- Our product context (look for a product context file in the project)
+- Our product context (look for a product context file)
 - Specific focus areas (e.g., "focus on pricing" or "analyze their enterprise features")
 - Output location (default: `competitor-[name]-comparison.md`)
 
-**If a product context file exists in the project**: Read it to understand our product for comparison purposes.
+**If a product context file exists**: Read it to understand our product for comparison purposes.
 
 ---
 
@@ -64,7 +64,7 @@ Gather essential information:
 Follow this prioritized approach to gather comprehensive competitive intelligence:
 
 #### Source 1: Project Files (Check First)
-- Search the project for existing research mentioning the competitor
+- Search for existing research mentioning the competitor
 - Search for transcripts or notes mentioning the competitor
 - Use `Read` to load any existing research notes found
 - **Why first**: Existing internal research is most reliable and contextual
@@ -277,7 +277,7 @@ If any category has no data, include it in the report with "No information found
 
 ### Step 6: Save Output
 
-**Default location**: `competitor-[name]-comparison.md` in the project root, or ask the user for preferred location
+**Default location**: `competitor-[name]-comparison.md` in the current directory, or ask the user for preferred location
 - Normalize name to lowercase-with-hyphens
 - Example: "Stripe" → `competitor-stripe-comparison.md`
 
@@ -371,17 +371,17 @@ For detailed guidance during research:
 Orchestrates research across multiple competitors in parallel and synthesizes into a comparison matrix.
 
 **Outputs**:
-- Individual reports: `competitor-[name]-comparison.md` (project root or user-specified location)
-- Comparison matrix: `competitor-comparison-matrix-YYYY-MM-DD.md` (project root or user-specified location)
+- Individual reports: `competitor-[name]-comparison.md` (current directory or user-specified location)
+- Comparison matrix: `competitor-comparison-matrix-YYYY-MM-DD.md` (current directory or user-specified location)
 
 ### Step 1: Identify Competitors
 
 Check in this order:
-1. **File**: Search the project for a competitors list file → parse competitor list
+1. **File**: Search for a competitors list file → parse competitor list
 2. **Arguments**: Parse `$ARGUMENTS` for comma-separated names/URLs
 3. **Prompt**: If neither exists, ask user for competitor list
 
-Also search the project for a product context file for comparison context.
+Also look for a product context file for comparison context.
 
 ### Step 2: Invoke Parallel Research
 

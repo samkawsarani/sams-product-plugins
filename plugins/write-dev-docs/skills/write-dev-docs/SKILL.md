@@ -80,7 +80,7 @@ The workflow adapts based on what the user provides:
 |--------|-----------|-------------------|
 | **OpenAPI/Swagger spec** | User provides `.yaml`/`.json` file or URL | Parse spec → extract endpoints, schemas, auth → generate structured docs |
 | **Existing code/routes** | User points to route files, controllers, or handlers | Infer API contracts from code → extract params, responses, middleware → document |
-| **Natural language description** | User describes the API verbally | Gather relevant context from the project → construct API docs from requirements and context |
+| **Natural language description** | User describes the API verbally | Gather relevant context → construct API docs from requirements and context |
 | **PRD/technical spec** | User references a spec or initiative file | Extract API requirements, resource models, error codes → generate developer-facing docs |
 
 ## Core Workflow
@@ -104,8 +104,8 @@ If doc type is ambiguous, ask the user. If input source is unclear, ask what the
    - OpenAPI specs, code files, PRDs, or natural language description
    - Any existing documentation to build on or replace
 
-2. **Supplementary project context** (if available):
-   - API standards, naming conventions, and strategic context from the project
+2. **Supplementary context** (if available):
+   - API standards, naming conventions, and strategic context
    - Goals related to developer experience or this API
    - Technical standards, release processes, and prior API design decisions
 
