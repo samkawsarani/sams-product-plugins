@@ -11,7 +11,7 @@ Before starting, check optional dependencies:
 
 1. **qmd (optional):** Run `command -v qmd`.
    - If **available**: Use `qmd query` for semantic search across knowledge bases — this gives the best results.
-   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
+   - If **missing**: Fall back to `Grep` and `Glob` for keyword search. Note to the user that `qmd` would improve search quality, but proceed without it.
 
 ---
 
@@ -33,11 +33,11 @@ Clarify what type of analysis is needed:
 - **Full report**: Comprehensive research synthesis document
 
 Determine the source materials:
-- Location of transcripts (typically `meetings/`)
-- Related documents in `initiatives/` or `projects/`
+- Location of transcripts (ask the user if not provided)
+- Related files — initiatives, specs, or prior research
 - Timeframe or specific interviews to analyze
 
-Use `qmd query "research topic"` to find related transcripts and documents across meetings/ and initiatives/.
+Find relevant transcripts and documents using available search tools.
 - Any specific questions to answer
 
 ### 2. Review Source Materials
@@ -133,9 +133,7 @@ Use the template at `assets/synthesis-report-template.md` when creating comprehe
 - Recommendations (immediate, short-term, long-term)
 - Open questions and next steps
 
-Save synthesis reports to appropriate location:
-- Related to initiative: `initiatives/[initiative-name]/research-synthesis-YYYY-MM-DD.md` (or wherever user stores initiatives)
-- General research: `initiatives/research-synthesis-[topic]-YYYY-MM-DD.md`
+Save synthesis reports alongside related files, or ask the user where to save.
 
 #### Insight Cards (Quick Summaries)
 
@@ -148,8 +146,7 @@ Use the template at `assets/insight-card-template.md` for stakeholder-friendly s
 - Why it matters
 - Recommended action
 
-Save insight cards to:
-- `initiatives/insight-[brief-title]-YYYY-MM-DD.md`
+Save insight cards alongside related files, or ask the user where to save.
 
 #### User Personas
 
@@ -160,9 +157,7 @@ Save insight cards to:
 - Persona format template
 - Anti-patterns to avoid
 
-Save personas to:
-- `initiatives/persona-[name].md`
-- Or within relevant initiative folder (wherever user stores initiatives)
+Save personas in the relevant project location, or ask the user where to save.
 
 ### 5. Link to Source Materials
 

@@ -2,27 +2,12 @@
 name: weekly-review
 model: sonnet
 description: Reviews the past week, checks goal progress, identifies blockers and stalled work, and plans next week's priorities. Internal reflection tool. Invoked via /weekly-review or "review my week", "plan next week", or "what did I accomplish this week".
-allowed-tools: list_tasks, get_task_summary, find_stale_tasks, Glob, Read, Bash(qmd:*)
 argument-hint: '[optional: "quick" for condensed version]'
-compatibility: "Requires Task MCP. qmd CLI optional for semantic search."
----
-
-## Dependency Check
-
-Before starting, verify dependencies:
-
-1. **MCP task tools (required):** Check if `list_tasks` is available in your tools list.
-   - If **missing**: Tell the user: "Task MCP tools are not configured. This skill requires task management tools (`list_tasks`, `get_task_summary`, `find_stale_tasks`). Please configure the task MCP server from [sams-product-os](https://github.com/samkawsarani/sams-product-os) and try again." **Stop here.**
-2. **qmd (optional):** Run `command -v qmd`.
-   - If **available**: Use `qmd query` for semantic search across knowledge bases.
-   - If **missing**: Fall back to `Grep` and `Glob` for keyword search across `knowledge/`, `meetings/`, and `initiatives/`. Note to the user that `qmd` would improve search quality, but proceed without it.
-
 ---
 
 ## Context
 
-Tasks are in `tasks/` with YAML frontmatter (priority, status, due_date, category).
-Goals are in `GOALS.md`.
+Find task and goal context.
 Today's date: $TODAY
 
 **Recommended timing:**
@@ -39,8 +24,8 @@ If user says "quick" or wants condensed version → Combine all steps into brief
 ## Step 1: Review Completed Work
 
 **Actions:**
-1. Read `tasks/` for tasks with status `d` (done) updated in past 7 days
-2. Group by goal alignment (reference `GOALS.md`)
+1. Find tasks completed in the past 7 days
+2. Group by goal alignment
 
 **Output format:**
 ```
@@ -64,7 +49,7 @@ If user says "quick" or wants condensed version → Combine all steps into brief
 ## Step 2: Check Goal Progress
 
 **Actions:**
-1. Read `GOALS.md`
+1. Find and read goals
 2. For each goal, assess:
    - Tasks completed toward this goal
    - Tasks in progress (status `s`)
