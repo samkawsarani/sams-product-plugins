@@ -27,6 +27,18 @@ git clone https://github.com/samkawsarani/sams-product-plugins <path>
 /plugin install analyze-competitor@sams-product-plugins
 ```
 
+**Alternative — Universal setup (`npx`)**
+
+Requires Node.js and `npx`. This path works with **Claude Code** and installs from this marketplace outside the `marketplace` & `plugins` flow.
+
+```bash
+# Install all plugins from this marketplace
+npx skills add samkawsarani/sams-product-plugins
+
+# Install specific plugins only
+npx skills add samkawsarani/sams-product-plugins --skill write-doc write-comms
+```
+
 ## Structure
 
 Each plugin follows this layout:
