@@ -5,31 +5,18 @@
 
 My Claude Code setup. A plugin marketplace of Claude Code skills for product management workflows. Install individual plugins to extend Claude with specialized PM capabilities.
 
-## Setup
+## Install
 
-**Step 1 — Add the marketplace (choose one):**
-
-```bash
-# Option A: directly from GitHub (recommended)
-/plugin marketplace add samkawsarani/sams-product-plugins
-
-# Option B: clone locally first, then add
-git clone https://github.com/samkawsarani/sams-product-plugins <path>
-/plugin marketplace add ./path/to/marketplace.json
-```
-
-**Step 2 — Install the plugins you want:**
+### Claude Code (recommended)
+Install as a plugin
 
 ```bash
-/plugin install {PLUGIN-NAME}@sams-product-plugins
-
-# Example:
-/plugin install analyze-competitor@sams-product-plugins
+claude plugin marketplace samkawsarani/sams-product-plugins
+claude plugin install {PLUGIN-NAME}@sams-product-plugins 
+# e.g. analyze-competitor@sams-product-plugins
 ```
 
-**Alternative — Universal setup (`npx`)**
-
-Requires Node.js and `npx`. This path works with **Claude Code** and installs from this marketplace outside the `marketplace` & `plugins` flow.
+### Any agent (Claude Code, Cursor, Copilot, Windsurf, Cline, Codex)
 
 ```bash
 # Install all plugins from this marketplace
@@ -37,6 +24,10 @@ npx skills add samkawsarani/sams-product-plugins
 
 # Install specific plugins only
 npx skills add samkawsarani/sams-product-plugins --skill write-doc write-comms
+
+# For a specific agent 
+npx skills add samkawsarani/sams-product-plugins --skill write-doc -a cursor
+
 ```
 
 ## Structure
