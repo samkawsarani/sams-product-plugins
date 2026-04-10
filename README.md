@@ -5,6 +5,8 @@
 
 My Claude Code setup. A plugin marketplace of Claude Code skills for product management workflows. Install individual plugins to extend Claude with specialized PM capabilities.
 
+[Install](#install) · [Plugin catalog](#plugin-catalog)
+
 ## Install
 
 ### Claude Code (recommended)
@@ -67,23 +69,6 @@ plugins/skill-name/
 | [write-dev-docs](./plugins/write-dev-docs/)         | Writing      | Developer documentation: API references, guides, and Postman collections               |
 | [write-doc](./plugins/write-doc/)                   | Writing      | Product documents: PRDs, specs, briefs, user stories, and decision docs                |
 | [write-ux-copy](./plugins/write-ux-copy/)           | Writing      | UX copy for buttons, errors, tooltips, notifications, and onboarding                   |
-
-
-## Dependencies
-
-
-| Dependency                       | Required by                                                              |
-| -------------------------------- | ------------------------------------------------------------------------ |
-| `qmd` CLI                        | analyze-research, weekly-recap, weekly-review, write-dev-docs, write-doc |
-| [MCP task tools](https://github.com/samkawsarani/sams-product-os) | daily-pulse, weekly-recap, weekly-review                                 |
-| `gws` CLI (Google Workspace)     | daily-pulse, write-comms                                                 |
-| `gh` (GitHub CLI)                | create-pr                                                                |
-| `git`                            | commit, create-pr, push                                                  |
-| Python 3                         | analyze-metrics, build-prototype                                         |
-| Node.js, `npx`                   | build-prototype                                                          |
-| Granola MCP                      | sync-granola-meetings                                                    |
-| Notion MCP (optional)            | analyze-competitor                                                       |
-| Slack MCP, Linear MCP (optional) | write-comms                                                              |
 
 
 ## License
