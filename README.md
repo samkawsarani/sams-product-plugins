@@ -3,6 +3,8 @@
 
 Quick links: [Install](#install) · [Plugin catalog](#plugin-catalog)
 
+---
+
 # PM Skills Marketplace
 
 My Claude Code setup. A plugin marketplace of Claude Code skills for product management workflows. Install individual plugins to extend Claude with specialized PM capabilities.
