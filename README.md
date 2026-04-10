@@ -1,11 +1,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Star this repo](https://img.shields.io/github/stars/samkawsarani/sams-product-plugins?style=social)](https://github.com/samkawsarani/sams-product-plugins)
 
+Quick links: [Install](#install) · [Plugin catalog](#plugin-catalog)
+
 # PM Skills Marketplace
 
 My Claude Code setup. A plugin marketplace of Claude Code skills for product management workflows. Install individual plugins to extend Claude with specialized PM capabilities.
 
-[Install](#install) · [Plugin catalog](#plugin-catalog)
 
 ## Install
 
