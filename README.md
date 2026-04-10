@@ -1,4 +1,4 @@
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Star this repo](https://img.shields.io/github/stars/samkawsarani/sams-product-plugins?style=social)](https://github.com/samkawsarani/sams-product-plugins)
 
 # PM Skills Marketplace
@@ -86,3 +86,6 @@ plugins/skill-name/
 | Slack MCP, Linear MCP (optional) | write-comms                                                              |
 
 
+## License
+
+[MIT](LICENSE) — Copyright (c) 2026 Sam Kawsarani
