@@ -57,6 +57,7 @@ plugins/skill-name/
 | Plugin                                              | Category     | Description                                                                            |
 | --------------------------------------------------- | ------------ | -------------------------------------------------------------------------------------- |
 | [analyze-competitor](./plugins/analyze-competitor/) | Research     | Competitive analysis with feature comparison, pricing research, and market positioning |
+| [analyze-meetings](./plugins/analyze-meetings/)     | Productivity | Meeting transcript analysis for communication patterns, conflict avoidance, and leadership style |
 | [analyze-metrics](./plugins/analyze-metrics/)       | Analytics    | Product metrics analysis for usage, adoption, conversion, retention, and revenue data  |
 | [analyze-research](./plugins/analyze-research/)     | Research     | User research synthesis from interviews, transcripts, and feedback                     |
 | [build-prototype](./plugins/build-prototype/)       | Development  | React/TypeScript prototype builder from PRDs using Shadcn/ui                           |

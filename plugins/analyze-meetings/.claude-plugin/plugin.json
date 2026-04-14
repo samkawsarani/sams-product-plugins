@@ -1,0 +1,9 @@
+{
+  "name": "analyze-meetings",
+  "description": "Meeting transcript analysis for communication patterns, conflict avoidance, speaking ratios, and leadership style",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}
