@@ -62,12 +62,9 @@ plugins/skill-name/
 | [build-prototype](./plugins/build-prototype/)       | Development  | React/TypeScript prototype builder from PRDs using Shadcn/ui                           |
 | [commit](./plugins/commit/)                         | Git          | Conventional commits with emoji prefixes and smart message formatting                  |
 | [create-pr](./plugins/create-pr/)                   | Git          | Pull request creation with comprehensive summary and test plan                         |
-| [daily-pulse](./plugins/daily-pulse/)               | Productivity | Morning briefing combining calendar agenda with task priorities                        |
 | [push](./plugins/push/)                             | Git          | Push to remote with upstream tracking and force-push safety checks                     |
 | [sync-granola-meetings](./plugins/sync-granola-meetings/) | Productivity | Sync Granola meetings to local meetings folder with transcripts and metadata     |
 | [translate-i18n](./plugins/translate-i18n/)         | Localization | English-French translation with Canadian French and OQLF compliance                    |
-| [weekly-recap](./plugins/weekly-recap/)             | Productivity | Executive-ready weekly recap structured around key initiatives                         |
-| [weekly-review](./plugins/weekly-review/)           | Productivity | Weekly review with goal progress, blockers, and next week planning                     |
 | [write-comms](./plugins/write-comms/)               | Writing      | Internal communications: status reports, newsletters, and stakeholder updates          |
 | [write-dev-docs](./plugins/write-dev-docs/)         | Writing      | Developer documentation: API references, guides, and Postman collections               |
 | [write-doc](./plugins/write-doc/)                   | Writing      | Product documents: PRDs, specs, briefs, user stories, and decision docs                |
