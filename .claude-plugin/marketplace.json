@@ -59,14 +59,6 @@
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     },
     {
-      "name": "daily-pulse",
-      "source": "./plugins/daily-pulse",
-      "description": "Morning briefing combining calendar agenda with task priorities",
-      "category": "productivity",
-      "version": "1.2.1",
-      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
-    },
-    {
       "name": "push",
       "source": "./plugins/push",
       "description": "Push to remote with upstream tracking and force-push safety checks",
@@ -88,22 +80,6 @@
       "description": "English-French translation with Canadian French and OQLF compliance",
       "category": "localization",
       "version": "1.0.1",
-      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
-    },
-    {
-      "name": "weekly-recap",
-      "source": "./plugins/weekly-recap",
-      "description": "Executive-ready weekly recap structured around key initiatives",
-      "category": "productivity",
-      "version": "1.2.1",
-      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
-    },
-    {
-      "name": "weekly-review",
-      "source": "./plugins/weekly-review",
-      "description": "Weekly review with goal progress, blockers, and next week planning",
-      "category": "productivity",
-      "version": "1.2.1",
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     },
     {
