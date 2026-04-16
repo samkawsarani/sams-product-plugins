@@ -67,11 +67,11 @@
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     },
     {
-      "name": "sync-granola-meetings",
-      "source": "./plugins/sync-granola-meetings",
+      "name": "sync-meetings",
+      "source": "./plugins/sync-meetings",
       "description": "Sync Granola meetings to local meetings folder with transcripts and metadata",
       "category": "productivity",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     },
     {

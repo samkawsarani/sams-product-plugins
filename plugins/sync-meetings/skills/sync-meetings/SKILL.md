@@ -1,5 +1,5 @@
 ---
-name: sync-granola-meetings
+name: sync-meetings
 description: Sync Granola meetings to local meetings folder. Invoked when user asks to sync meetings, pull transcripts, or says "sync my meetings", "pull today's meetings", "what meetings did I have".
 allowed-tools: mcp__granola__list_meetings, mcp__granola__get_meetings, mcp__granola__get_meeting_transcript, Read, Write, Glob, Bash
 argument-hint: "[folder-name] [--days N] [--all]"
@@ -10,8 +10,8 @@ compatibility: "Requires Granola MCP."
 
 Before starting, verify required dependencies:
 
-1. **Granola MCP (required):** Check if `mcp__granola__list_meetings` is available in your tools list.
-   - If **missing**: Tell the user: "The Granola MCP server is not configured. This skill requires Granola MCP tools (`mcp__granola__list_meetings`, `mcp__granola__get_meetings`, `mcp__granola__get_meeting_transcript`). Please install and configure the Granola MCP server (see https://granola.ai) and try again." **Stop here.**
+1. **Granola MCP (required):** Check if Granola MCP tools are available in your tools list.
+   - If **missing**: Tell the user: "The Granola MCP server is not configured. This skill requires Granola MCP. Please install and configure the Granola MCP server (see https://granola.ai) and try again." **Stop here.**
 
 ## Context
 
@@ -50,7 +50,7 @@ Read `<target-folder>/.synced-meetings.json`. If it doesn't exist, this is a fir
 
 ## Step 3: List Meetings from Granola
 
-Call `mcp__granola__list_meetings` with the appropriate time range:
+Via Granola MCP, list meetings with the appropriate time range:
 - **First sync** (no `.synced-meetings.json`): use `last_30_days`
 - **Subsequent syncs**: use `this_week`
 - **`--days N`**: use custom range based on N
@@ -82,13 +82,13 @@ Wait for user confirmation before proceeding.
 For each selected meeting:
 
 ### 6a. Fetch Metadata
-Call `mcp__granola__get_meetings` with the meeting ID to get:
+Via Granola MCP, fetch the meeting to get:
 - Title, created_at, updated_at
 - Attendees list (names and emails)
 - Granola URL (`https://notes.granola.ai/d/<uuid>`)
 
 ### 6b. Fetch Transcript
-Call `mcp__granola__get_meeting_transcript` for the transcript content.
+Via Granola MCP, fetch the meeting transcript.
 - **Skip** meetings with empty or no transcript (placeholder meetings). Tell the user you're skipping and why.
 
 ### 6c. Generate Filename
