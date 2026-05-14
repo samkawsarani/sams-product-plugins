@@ -59,14 +59,6 @@
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     },
     {
-      "name": "push",
-      "source": "./plugins/push",
-      "description": "Push to remote with upstream tracking and force-push safety checks",
-      "category": "git",
-      "version": "1.0.1",
-      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
-    },
-    {
       "name": "sync-meetings",
       "source": "./plugins/sync-meetings",
       "description": "Sync Granola meetings to local meetings folder with transcripts and metadata",
