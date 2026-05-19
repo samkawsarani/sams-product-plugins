@@ -20,19 +20,6 @@ Before starting, check optional dependencies:
 
 Generate Stripe-quality developer documentation — API references, integration guides, code recipes, and Postman collections — from any input source.
 
-## Contents
-
-- [Quick Start](#quick-start)
-- [Doc Types](#doc-types)
-- [Input Sources](#input-sources)
-- [Core Workflow](#core-workflow) (Steps 1-6: Request, Context, Format, Generate, Validate, Present)
-- [API Reference](#api-reference)
-- [Integration Guide](#integration-guide)
-- [Code Recipe](#code-recipe)
-- [Postman Collection](#postman-collection)
-- [Quality Checklist](#quality-checklist)
-- [Assets Reference](#assets-reference)
-
 ## Quick Start
 
 **Arguments:** `$ARGUMENTS`
@@ -158,163 +145,18 @@ Present the generated documentation with:
 
 Then iterate based on feedback. Re-validate against the Quality Checklist after each revision.
 
-## API Reference
+## Doc Type Guidelines
 
-**Template:** `assets/api-reference-template.md`
-**Format rules:** `references/api-reference-format.md`
+Each type has a template in `assets/` and format rules in `references/`. Key non-obvious rules:
 
-**Structure per resource:**
-- Resource overview (what it represents, when to use it)
-- Authentication block (how to authenticate requests)
-- Rate limits table
-- The Resource Object (full attribute table)
-- Per-endpoint sections:
-  - Description and use case
-  - Parameters table (name, type, required/optional, description)
-  - Request examples (cURL, Node.js, Python)
-  - Response object table
-  - Response JSON example
-  - Error table (code, status, description, resolution)
-  - Related endpoints
+**API Reference** (`assets/api-reference-template.md`, `references/api-reference-format.md`): Auth block before any endpoint. Every error code has a resolution step (not just a description). Document idempotency key support where applicable.
 
-**API Reference guidelines:**
-1. **Auth first**: Every reference page starts with how to authenticate
-2. **Every parameter documented**: No param left undescribed — include type, constraints, default values
-3. **Every error has a resolution**: Don't just list error codes — tell developers how to fix them
-4. **Working examples**: Code samples must be copy-paste ready with test credentials
-5. **Stripe naming conventions**: snake_case for params, prefixed IDs (`pay_`, `txn_`, `mer_`), expandable objects
-6. **Rate limits and pagination**: Always document these — developers need them for production code
-7. **Idempotency**: Document idempotency key support where applicable
-8. **Versioning**: Note API version in every page header
+**Integration Guide** (`assets/guide-template.md`, `references/guide-format.md`): Open with outcome statement ("By the end of this guide..."). Each step shows expected output. Use NOTE/WARNING/TIP/SECURITY callout blocks for important asides.
 
-## Integration Guide
+**Code Recipe** (`assets/code-recipe-template.md`, `references/code-recipe-format.md`): Outcome-oriented titles ("Create a Refund", not "POST /refunds"). Variations shown as additive diffs from the base recipe — not full rewrites.
 
-**Template:** `assets/guide-template.md`
-**Format rules:** `references/guide-format.md`
-
-**Structure:**
-- Overview ("By the end of this guide, you'll have...")
-- Prerequisites (exact versions, install commands)
-- Sequential steps (each with code, expected output, error handling)
-- Testing your integration (sandbox scenarios)
-- Next steps and related resources
-
-**Guide guidelines:**
-1. **Outcome-first framing**: Lead with what the developer will accomplish
-2. **Sequential atomic steps**: Each step does exactly one thing
-3. **Expected output per step**: Show what success looks like after each step
-4. **Inline error handling**: Address common mistakes right where they happen
-5. **Sandbox-first**: Always use test/sandbox credentials in examples
-6. **Progressive disclosure**: Quickstart (10 min) → Full guide (1 hr) → Reference docs
-7. **Callout boxes**: Use NOTE, WARNING, TIP, SECURITY callouts for important asides
-
-## Code Recipe
-
-**Template:** `assets/code-recipe-template.md`
-**Format rules:** `references/code-recipe-format.md`
-
-**Structure:**
-- Recipe title (outcome-oriented: "Accept a Payment", not "POST /payments")
-- When to use / What you'll need
-- Code in cURL, Node.js, Python (consistent variable names)
-- What this does (plain-English explanation)
-- Expected response JSON
-- Variations (additive diffs from base)
-- Error handling table
-- Related recipes
-
-**Recipe guidelines:**
-1. **Outcome-oriented titles**: "Create a Refund", not "POST /refunds"
-2. **Copy-paste ready**: Every snippet runs as-is with test credentials
-3. **Consistent structure across languages**: Same variable names, same flow, same comments
-4. **Complete not minimal**: Include headers, error handling, response parsing
-5. **Variations as additive diffs**: Show what changes from the base recipe, not a full rewrite
-
-## Postman Collection
-
-**Template:** `assets/postman-collection-template.json`
-**Format rules:** `references/postman-format.md`
-
-**Structure:**
-- Collection-level Bearer auth with `{{secret_key}}`
-- Collection variables: `base_url`, `secret_key`, `publishable_key`, resource IDs
-- Resource folders with Create/Retrieve/Update/List/Delete requests
-- Test scripts with status checks and variable chaining
-- Pre-filled example request bodies
-
-**Postman guidelines:**
-1. **Collection-level auth**: Auth inherits to all requests via `{{secret_key}}`
-2. **Environment file shipped separately**: Collection variables for defaults, environment file for secrets
-3. **Test scripts on every request**: Minimum 3 assertions per request (status, content-type, body structure)
-4. **Variable chaining**: Create → save ID to variable → use in subsequent requests
-5. **CRUD folder ordering**: Create, Retrieve, Update, List, Delete
-6. **Pre-filled bodies**: Example request bodies with realistic test data, not empty objects
+**Postman Collection** (`assets/postman-collection-template.json`, `references/postman-format.md`): Auth at collection level via `{{secret_key}}`. Minimum 3 test script assertions per request. Chain variables: Create → save ID → use in subsequent requests.
 
 ## Quality Checklist
 
-Before presenting any generated documentation, verify all applicable items. This is a **hard gate** — fix failures before presenting.
-
-### Completeness
-- [ ] All template sections are filled with real content (no placeholders)
-- [ ] No `[TODO]`, `[placeholder]`, `[NAME]`, or `...` text remains
-- [ ] Every endpoint has request examples in all specified languages
-- [ ] Every parameter is documented with type, constraints, and description
-- [ ] Every error code has a resolution (not just a description)
-
-### Authentication
-- [ ] Auth section appears before any endpoint documentation
-- [ ] Examples use test/sandbox credentials (never real keys)
-- [ ] Auth method is explicitly stated (Bearer token, API key, OAuth)
-- [ ] Key format and placement documented (header, query param, body)
-
-### Developer Experience
-- [ ] Code samples are copy-paste ready (complete, runnable)
-- [ ] Expected responses shown for every request example
-- [ ] Error scenarios include resolution steps
-- [ ] Rate limits documented where applicable
-- [ ] Pagination pattern documented for list endpoints
-
-### Correctness
-- [ ] HTTP methods match the operation (GET for read, POST for create, etc.)
-- [ ] Status codes are correct (201 for create, 200 for retrieve, 204 for delete)
-- [ ] Request/response JSON is valid and consistent
-- [ ] Parameter types match between documentation and examples
-- [ ] Endpoint paths are consistent throughout the document
-
-### Format
-- [ ] Resource names use snake_case
-- [ ] IDs use prefixed format where applicable (`pay_`, `txn_`, `mer_`)
-- [ ] Code samples follow language-specific conventions
-- [ ] Tables are properly formatted with consistent columns
-- [ ] Headers follow logical hierarchy (H1 → H2 → H3)
-
-### Guide-Specific (when applicable)
-- [ ] Opens with outcome statement ("By the end of this guide...")
-- [ ] Prerequisites list exact versions and install commands
-- [ ] Each step has expected output
-- [ ] Callout boxes used for warnings and tips
-- [ ] Next steps section links to related docs
-
-### Postman-Specific (when applicable)
-- [ ] Collection uses Postman v2.1 schema
-- [ ] Auth is set at collection level with `{{secret_key}}`
-- [ ] Test scripts on every request (minimum 3 assertions)
-- [ ] Variable chaining works across requests in sequence
-- [ ] Environment variables separated from collection variables
-- [ ] JSON is valid and importable
-
-## Assets Reference
-
-All templates are in this skill's `assets/` directory:
-- `assets/api-reference-template.md` — Endpoint-by-endpoint API reference
-- `assets/guide-template.md` — Step-by-step integration guide
-- `assets/code-recipe-template.md` — Multi-language code recipe
-- `assets/postman-collection-template.json` — Postman v2.1 collection
-
-Format references are in `references/`:
-- `references/api-reference-format.md` — Stripe-level endpoint documentation rules
-- `references/guide-format.md` — Tutorial and guide writing standards
-- `references/code-recipe-format.md` — Per-language code sample conventions
-- `references/postman-format.md` — Collection architecture and test script rules
-
-Templates are used as structure but never modified. Generated documents are saved to the user's preferred location.
+Validate against `references/quality-checklist.md` before presenting — this is a hard gate. Fix failures before showing output.

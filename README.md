@@ -61,8 +61,6 @@ plugins/skill-name/
 | [analyze-metrics](./plugins/analyze-metrics/)       | Analytics    | Product metrics analysis for usage, adoption, conversion, retention, and revenue data  |
 | [analyze-research](./plugins/analyze-research/)     | Research     | User research synthesis from interviews, transcripts, and feedback                     |
 | [build-prototype](./plugins/build-prototype/)       | Development  | React/TypeScript prototype builder from PRDs using Shadcn/ui                           |
-| [commit](./plugins/commit/)                         | Git          | Conventional commits with emoji prefixes and smart message formatting                  |
-| [create-pr](./plugins/create-pr/)                   | Git          | Pull request creation with comprehensive summary and test plan                         |
 | [sync-meetings](./plugins/sync-meetings/)           | Productivity | Sync Granola meetings to local meetings folder with transcripts and metadata           |
 | [translate-i18n](./plugins/translate-i18n/)         | Localization | English-French translation with Canadian French and OQLF compliance                    |
 | [write-comms](./plugins/write-comms/)               | Writing      | Internal communications: status reports, newsletters, and stakeholder updates          |

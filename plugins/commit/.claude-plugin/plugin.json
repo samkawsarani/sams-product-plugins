@@ -1,9 +1,0 @@
-{
-  "name": "commit",
-  "description": "Conventional commits with emoji prefixes and smart message formatting",
-  "version": "1.0.1",
-  "author": {
-    "name": "Sam Kawsarani",
-    "email": "contact@samkawsarani.com"
-  }
-}

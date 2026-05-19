@@ -7,16 +7,7 @@ compatibility: "Requires python3, node, npm, and npx CLIs."
 
 ## Dependency Check
 
-Before starting, verify required dependencies:
-
-1. **python3 (required):** Run `command -v python3`.
-   - If **missing**: Tell the user: "Python 3 is required to run prototype scripts. Install it with `brew install python` or `brew install uv && uv python install`, then try again." **Stop here.**
-2. **node (required):** Run `command -v node`.
-   - If **missing**: Tell the user: "Node.js is required to build prototypes. Install it with `brew install node`, then try again." **Stop here.**
-3. **npm (required):** Run `command -v npm`.
-   - If **missing**: Tell the user: "npm is required to install dependencies. Install Node.js with `brew install node` (npm is included), then try again." **Stop here.**
-4. **npx (required):** Run `command -v npx`.
-   - If **missing**: Tell the user: "npx is required to run Shadcn CLI. Install Node.js with `brew install node` (npx is included), then try again." **Stop here.**
+Run `command -v python3 node npm npx` — if any are missing, tell the user which tools are required. `python3`: `brew install python` or `brew install uv && uv python install`. `node`/`npm`/`npx`: `brew install node` (all three included). Stop if any are missing.
 
 ---
 

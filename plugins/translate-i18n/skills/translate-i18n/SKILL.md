@@ -89,24 +89,12 @@ Notes:
    - Note any content that may not translate culturally
    - Identify images, icons, or symbols that need adaptation
 
-2. **Analyze cultural considerations**
-   - Date/time formats (DD/MM/YYYY vs MM/DD/YYYY)
-   - Number formats (1,000.50 vs 1 000,50)
-   - Currency symbols and placement
-   - Address formats and fields
-   - Units of measurement (imperial vs metric)
-   - Color symbolism and cultural meanings
-   - Icons and imagery appropriateness
-   - Local regulations and compliance (OQLF, GDPR, etc.)
+2. **Analyze and plan**
+   - Cultural considerations: date/time/number formats, currency, address fields, units, color symbolism, icon appropriateness, local regulations (OQLF, GDPR)
+   - Localization strategy: what to translate vs. localize vs. keep, content adaptation needs, cultural sensitivities, market-specific features
+   - Technical requirements: character encoding, text direction, text expansion handling
 
-3. **Create localization plan**
-   - Translation strategy (what to translate, what to localize, what to keep)
-   - Technical considerations (character encoding, text direction)
-   - Content adaptation needs (rewrite vs translate)
-   - Cultural sensitivities to address
-   - Market-specific features or content
-
-4. **Provide comprehensive localization**
+3. **Provide comprehensive localization**
    - Translated UI copy
    - Adapted content and messaging
    - Technical requirements (date/number formats)
@@ -198,20 +186,11 @@ Notes:
    - Avoid idioms that don't cross cultures
    - Plan layouts flexible for longer text
 
-2. **Write source content (English) for translatability**
-   - Use clear, simple language
-   - Avoid ambiguous phrasing
-   - Be explicit about context
-   - Use complete sentences
-   - Avoid concatenating strings
+2. **Write both versions**
 
-3. **Create high-quality French version**
-   - Translate with context in mind
-   - Adapt, don't just translate literally
-   - Ensure both versions have equal quality
-   - Maintain brand voice in both languages
+   Write English for translatability: simple language, complete sentences, no concatenated strings, no ambiguous phrasing. Then create the French version: adapt rather than translate literally, use culturally appropriate idioms and examples, maintain equal quality and brand voice in both languages.
 
-4. **Provide comprehensive bilingual set**
+3. **Provide comprehensive bilingual set**
    - Side-by-side comparison
    - Context notes for developers
    - Character length for both

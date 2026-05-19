@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "A marketplace of Claude Code plugins for product management workflows",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
@@ -39,22 +39,6 @@
       "source": "./plugins/build-prototype",
       "description": "React/TypeScript prototype builder from PRDs using Shadcn/ui",
       "category": "development",
-      "version": "1.1.1",
-      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
-    },
-    {
-      "name": "commit",
-      "source": "./plugins/commit",
-      "description": "Conventional commits with emoji prefixes and smart message formatting",
-      "category": "git",
-      "version": "1.0.1",
-      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
-    },
-    {
-      "name": "create-pr",
-      "source": "./plugins/create-pr",
-      "description": "Pull request creation with comprehensive summary and test plan",
-      "category": "git",
       "version": "1.1.1",
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     },

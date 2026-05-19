@@ -81,40 +81,7 @@ Based on the analysis framework, systematically:
 
 ### 3b. Multiple Transcript Analysis (Parallel Processing)
 
-When analyzing 3+ transcripts, use parallel processing for efficiency:
-
-1. **Launch parallel Explore agents** (max 3 concurrent) to analyze transcripts independently:
-   ```
-   Task(subagent_type="Explore", prompt="Analyze transcript [path] and extract: themes, verbatim quotes, pain points, opportunities, feature requests. Return structured findings.")
-   ```
-
-2. **Each agent extracts**:
-   - Recurring themes with frequency
-   - Verbatim quotes with attribution
-   - Pain points with intensity assessment
-   - Opportunities and feature requests
-   - Jobs to be done
-
-3. **Aggregate results** from parallel analyses:
-   - Merge themes, combining frequency counts
-   - Deduplicate quotes (keep best examples)
-   - Cross-reference patterns that appear in multiple transcripts
-   - Identify themes with highest frequency AND intensity
-
-4. **Synthesize into unified findings**:
-   - Prioritize themes by: (frequency across transcripts) x (intensity)
-   - Note contradictions or outliers
-   - Flag themes that only appear in 1 transcript vs. widespread patterns
-
-**When to use parallel processing:**
-- 3+ transcripts to analyze
-- Transcripts are independent (different interviews, not parts of same session)
-- Time efficiency is important
-
-**When to use sequential processing:**
-- 1-2 transcripts
-- Transcripts are related/continuation of same session
-- Deep analysis of a single interview is needed
+When analyzing 3+ independent transcripts, launch parallel Explore agents (max 3 concurrent) to analyze transcripts independently — each extracting themes, verbatim quotes, pain points, and feature requests with frequency/intensity. Then aggregate: merge theme counts, deduplicate quotes, cross-reference patterns across transcripts, and prioritize by (frequency × intensity).
 
 ### 4. Create Deliverable
 
@@ -169,32 +136,7 @@ Always reference source materials in the output:
 
 ## Best Practices
 
-**Quote liberally:**
-- Use participants' exact words for authenticity
-- Always attribute (Interview YYYY-MM-DD with [Role])
-- Preserve emotional tone in brackets [frustrated], [excited]
-
-**Be systematic:**
-- Follow the analysis framework for consistency
-- Don't cherry-pick only data that supports assumptions
-- Note contradictions or surprising findings
-- Track frequency and intensity of themes
-
-**Make it actionable:**
-- Connect findings to product implications
-- Suggest concrete next steps
-- Prioritize recommendations
-- Flag what requires further research
-
-**Stay grounded in data:**
-- Don't extrapolate beyond what research supports
-- Distinguish between edge cases and patterns
-- Note sample size and limitations
-- Challenge confirmation bias
-
-## Quick Reference
-
-- **Analysis framework**: See `references/analysis-framework.md`
-- **Persona creation**: See `references/persona-guide.md`
-- **Full report template**: `assets/synthesis-report-template.md`
-- **Insight card template**: `assets/insight-card-template.md`
+- Quote verbatim with attribution (Interview YYYY-MM-DD with [Role]) — never paraphrase customer words
+- Track both frequency (how many mentioned it) and intensity (how strongly they felt) — prioritize themes with both
+- Don't cherry-pick: note contradictions and distinguish edge cases from patterns
+- Make it actionable: connect findings to product implications, flag what needs further research

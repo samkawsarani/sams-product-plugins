@@ -105,15 +105,7 @@ For detailed patterns by copy type (errors, microcopy, onboarding, notifications
    - Offer alternatives if applicable
    - Flag concerns or questions
 
-**Review against checklist** (from `references/ux-copy-best-practices.md`):
-- [ ] Clear: Meaning immediately obvious
-- [ ] Concise: No unnecessary words
-- [ ] Helpful: Guides users to success
-- [ ] Consistent: Matches terminology elsewhere
-- [ ] Action-oriented: Uses active verbs
-- [ ] Human: Sounds natural
-- [ ] Accessible: Screen reader friendly
-- [ ] On-brand: Matches product voice
+Run the Quality Checklist below before presenting revised copy.
 
 **Output format:**
 
@@ -150,17 +142,11 @@ Before delivering copy, run through the Quality Checklist below. For each failed
 
 Before delivering any UX copy:
 
-**Clarity:**
-- [ ] Message is immediately clear
+**Clarity & Conciseness:**
+- [ ] Message is immediately clear and unambiguous
 - [ ] No jargon or technical terms (unless necessary)
-- [ ] Users will understand what to do
-- [ ] Meaning is unambiguous
-
-**Conciseness:**
-- [ ] Every word earns its place
-- [ ] No filler words ("just", "simply", "please" unless needed)
+- [ ] Every word earns its place — no filler ("just", "simply")
 - [ ] Fits UI constraints
-- [ ] Gets to the point quickly
 
 **Helpfulness:**
 - [ ] Guides users to success

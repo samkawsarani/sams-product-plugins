@@ -17,17 +17,6 @@ compatibility: "Notion MCP optional for internal research."
 
 Perform comprehensive competitive analysis of a single competitor, gathering intelligence from multiple sources to create a structured research report.
 
-## Contents
-
-- [Overview](#overview)
-- [Workflow](#workflow) (Steps 1-6: Request, Gather, Analyze, Generate, Validate, Save)
-- [Best Practices](#best-practices)
-- [Error Handling](#error-handling)
-- [Reference Documents](#reference-documents)
-- [Multi-Competitor Research](#multi-competitor-research)
-
-## Overview
-
 This skill analyzes ONE competitor at a time. For analyzing multiple competitors in parallel, pass multiple competitor names.
 
 **Output**: Structured markdown report saved to `competitor-[NAME]-comparison.md` (or user-specified location)
@@ -99,64 +88,9 @@ Follow this prioritized approach to gather comprehensive competitive intelligenc
 - Clarify any ambiguous information
 - **Why last**: Fill gaps identified in other sources
 
-**Research Categories to Cover**:
+**Research Categories to Cover**: Company Overview, Product Features, Pricing Model, Target Customers, Strengths & Competitive Advantages, Weaknesses & Gaps, Customer Testimonials & Reviews, Market Positioning.
 
-For each source, extract information in these categories:
-
-1. **Company Overview**:
-   - Mission/vision statements
-   - Founded date, headquarters
-   - Company size (employees, funding, revenue if public)
-   - Recent news or developments
-
-2. **Product Features**:
-   - Core capabilities
-   - Unique differentiators
-   - Feature list (organize by category)
-   - Technical architecture/approach
-   - Integrations and ecosystem
-
-3. **Pricing Model**:
-   - Pricing tiers (Free, Starter, Pro, Enterprise)
-   - Cost per tier
-   - What's included in each tier
-   - Free trial details
-   - Hidden fees or additional costs
-   - Discounts (annual, volume, non-profit)
-
-4. **Target Customers**:
-   - Ideal customer profile (company size, industry, role)
-   - Named customers (from case studies, logos on website)
-   - Target markets/geographies
-   - Use cases they optimize for
-
-5. **Strengths & Competitive Advantages**:
-   - What they do better than alternatives
-   - Market position (leader, challenger, niche)
-   - Brand strength
-   - Network effects or moats
-   - Technology advantages
-
-6. **Weaknesses & Gaps**:
-   - Common complaints (from reviews, Reddit, forums)
-   - Missing features (compared to competitors or our product)
-   - Scalability issues
-   - Customer support problems
-   - Pricing concerns
-
-7. **Customer Testimonials & Reviews**:
-   - Positive quotes (verbatim from reviews, case studies)
-   - Critical feedback (verbatim from reviews)
-   - Overall sentiment (ratings on review sites)
-   - Common praise themes
-   - Common criticism themes
-
-8. **Market Positioning**:
-   - How they describe themselves (tagline, value prop)
-   - Key messaging themes
-   - Positioning vs competitors
-   - Marketing approach
-   - Target personas they emphasize
+See `references/research-methodology.md` for extraction guidance, credibility checks, and what to look for in each category.
 
 ---
 
@@ -191,78 +125,9 @@ After gathering raw data, analyze it:
 
 ### Step 4: Generate Report
 
-Use the structure from `assets/competitor-profile-template.md` to create the report.
+Use `assets/competitor-profile-template.md` — it contains all required sections in order with formatting guidance. Follow the template structure exactly.
 
-**Report Sections** (in order):
-
-1. **Executive Summary** (2-3 key takeaways)
-   - Most important insights for strategic decision-making
-   - What makes this competitor unique or threatening
-   - Key gaps or opportunities identified
-
-2. **Company Overview**
-   - Background, size, mission
-   - Recent developments
-   - Market position
-
-3. **Product Features** (use table format)
-   - Feature comparison table (if product-info.md exists)
-   - Unique capabilities we don't have
-   - Missing features they don't have
-
-4. **Pricing Model** (use table format)
-   - Pricing tiers table
-   - Comparison to our pricing (if known)
-   - Notes on discounts, free trials
-
-5. **Target Customers**
-   - Ideal customer profile
-   - Named customers and case studies
-   - Market segments
-
-6. **Strengths & Competitive Advantages**
-   - Numbered list with evidence
-   - What they do exceptionally well
-   - Why customers choose them
-
-7. **Weaknesses & Gaps**
-   - Numbered list with evidence
-   - Common complaints
-   - Opportunities for us to capitalize
-
-8. **Customer Testimonials**
-   - Positive quotes (verbatim with source + date)
-   - Critical feedback (verbatim with source + date)
-   - Overall sentiment summary
-
-9. **Market Positioning**
-   - How they position themselves
-   - Key messaging themes
-   - Differentiation strategy
-
-10. **Strategic Implications**
-    - **Threats**: How their strengths threaten us
-    - **Opportunities**: Gaps we can exploit
-    - **Recommended Response**: Strategic recommendation
-
-11. **Data Sources & Citations**
-    - Web sources (URL + date accessed)
-    - Notion pages (mention format if used)
-    - Knowledge base files (file paths)
-    - User-provided sources
-
-12. **Metadata**
-    - Last Updated: [YYYY-MM-DD]
-    - Data Freshness Assessment
-    - Recommended Re-Research Timeline (3-6 months)
-
-**Formatting Best Practices**:
-- Use tables for features and pricing (easier to scan)
-- Use blockquotes for testimonials with attribution
-- Use ✅/⚠️/❌ for feature comparisons
-- Include "Comparison to Us" column only if product-info.md exists
-- Bold key terms and company names
-- Link all sources (URLs, file paths)
+Key formatting rules: use tables for features and pricing, blockquotes for verbatim testimonials with attribution, ✅/⚠️/❌ for feature comparisons. Include "Comparison to Us" column only if product-info.md exists.
 
 ---
 
@@ -287,42 +152,6 @@ If any category has no data, include it in the report with "No information found
 - Confirm save location to user
 - Provide 2-3 sentence summary of key findings
 - Suggest next steps (research more competitors, create comparison matrix)
-
----
-
-## Best Practices
-
-**Quote Liberally**:
-- Always use verbatim quotes for testimonials and reviews
-- Never paraphrase customer feedback
-- Always attribute with source and date
-
-**Use Tables**:
-- Features comparison: table format
-- Pricing tiers: table format
-- Makes reports scannable for PMs
-
-**Flag Data Gaps**:
-- If pricing not found: note "Pricing not publicly available"
-- If few reviews: note "Limited customer feedback found"
-- If outdated: note "Data from [year], may be outdated"
-
-**Cite Everything**:
-- Every fact should trace to a source
-- Use markdown links for web sources
-- Use file paths for knowledge base sources
-- Use Notion mention format for Notion pages
-
-**Assess Freshness**:
-- Note when data was collected
-- Flag information older than 6 months
-- Recommend re-research timeline (usually 3-6 months)
-
-**Focus on Strategic Value**:
-- Don't just list features - analyze what they mean
-- Identify gaps that represent opportunities
-- Highlight threats from their strengths
-- Provide actionable recommendations
 
 ---
 
@@ -353,16 +182,6 @@ If any category has no data, include it in the report with "No information found
 - Clearly mark data gaps
 - Suggest manual research or user interviews
 - Recommend researching a different competitor if this one is too obscure
-
----
-
-## Reference Documents
-
-For detailed guidance during research:
-- `references/research-methodology.md` - Systematic competitor analysis framework
-- `references/data-source-guide.md` - How to prioritize and use each source type
-- `assets/competitor-profile-template.md` - Complete output template
-- `assets/analysis-checklist.md` - Quality checklist before finalizing report
 
 ---
 

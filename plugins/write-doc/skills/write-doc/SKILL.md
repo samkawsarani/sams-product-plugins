@@ -20,20 +20,6 @@ Before starting, check optional dependencies:
 
 Generate comprehensive product documentation (PRDs, briefs, specs, user stories, decision docs) with full context from your knowledge base.
 
-## Contents
-
-- [Modes](#modes)
-- [Quick Start](#quick-start)
-- [Core Workflow](#core-workflow) (Steps 1-6: Request, Context, Template, Draft, Validate, Present)
-- [PRD Generation](#prd-generation)
-- [Brief Generation](#brief-generation)
-- [Spec Generation](#spec-generation)
-- [User Stories Generation](#user-stories-generation)
-- [Decision Documentation](#decision-documentation)
-- [Quality Checklist](#quality-checklist)
-- [Advanced Usage](#advanced-usage)
-- [Assets Reference](#assets-reference)
-
 ## Modes
 
 This skill supports two modes:
@@ -151,165 +137,19 @@ Present the generated document with:
 
 Then iterate based on user feedback. After each round of revisions, re-validate against the Quality Checklist before presenting updates.
 
-## PRD Generation
+## Doc Type Guidelines
 
-**Template:** `assets/prd-template.md`
+Each type has a template in `assets/`. Key non-obvious rules per type:
 
-**Comprehensive PRD structure:**
-- Executive Summary (TL;DR, problem, solution, metrics, stakeholders)
-- Market & Competitive Context
-- User Research & Insights
-- Product Strategy & Alignment
-- Product Requirements (must-have, should-have, nice-to-have)
-- Success Criteria & Metrics
-- User Experience & Design
-- Technical Considerations
-- Go-to-Market Strategy
-- Timeline & Milestones
-- Risks & Mitigations
+**PRD** (`assets/prd-template.md`): Lead with "Why" (business value, user impact). Define success with current → target metric values. Explicitly call out what's out of scope.
 
-**PRD-specific guidelines:**
-1. **Start with "Why"**: Always lead with business value and user impact
-2. **Be comprehensive but scannable**: Use tables, bullets, clear headers
-3. **Include competitive context**: Reference market research if available
-4. **Define success clearly**: Specific metrics with current → target values
-5. **Call out scope**: Explicitly state what's out of scope
-6. **Add evidence**: Support claims with user research, data, or market insights
-7. **Consider cross-functional needs**: Marketing, sales, support, legal
+**Brief** (`assets/brief-template.md`): 1–2 pages max — this is an alignment doc, not a spec. In/out scope must be crystal clear.
 
+**Spec** (`assets/spec-template.md`): Requirements use P0/P1/P2 prioritization. Every requirement has testable acceptance criteria.
 
-## Brief Generation
+**User Stories** (`assets/user-stories-template.md`): Standard format "As a [user], I want [goal], so that [benefit]". Include edge cases and error scenarios. Each story gets 3–5 acceptance criteria.
 
-**Template:** `assets/brief-template.md`
-
-**Project brief structure:**
-- TL;DR
-- Overview (what, why, who)
-- Goals & Success Metrics
-- Scope (in/out)
-- Timeline & Milestones
-- Team & Stakeholders
-- Context & Background
-- Approach
-- Risks & Open Questions
-- Decision Log & Updates
-
-**Brief-specific guidelines:**
-1. **Keep it concise**: Briefs are 1-2 pages, high-level overviews
-2. **Focus on alignment**: Getting everyone on the same page about goals
-3. **Clear scope**: What's in and out should be crystal clear
-4. **Actionable next steps**: What needs to happen to move forward
-5. **Stakeholder clarity**: Who's involved and their roles
-
-**When to create from opportunities:**
-- If user provides an opportunity file, expand it into initiative format
-- Add structured assessment: target customer, success metrics, research questions
-- Link back to original opportunity
-
-## Spec Generation
-
-**Template:** `assets/spec-template.md`
-
-**Product spec structure:**
-- Executive Summary
-- Context & Background
-- User Research & Insights
-- User Stories & Jobs-to-be-Done
-- Functional Requirements (P0, P1, P2)
-- Non-Functional Requirements
-- User Experience & Design
-- Technical Considerations
-- Success Criteria & Metrics
-- Launch & Rollout Plan
-- Timeline & Milestones
-- Risks & Open Questions
-
-**Spec-specific guidelines:**
-1. **User-centric**: Lead with user stories and JTBD
-2. **Prioritized requirements**: Clear P0/P1/P2 prioritization
-3. **Acceptance criteria**: Every requirement has testable criteria
-4. **Design considerations**: Reference design files if available
-5. **Technical feasibility**: High-level architecture, dependencies, risks
-6. **Launch plan**: How we'll roll out (phased, beta, full launch)
-
-**Spec workflow:**
-1. Review related opportunities or initiatives
-2. Extract user stories and pain points
-3. Define functional requirements with acceptance criteria
-4. Add non-functional requirements (performance, security, accessibility)
-5. Outline user flows and design considerations
-6. Document technical dependencies and risks
-
-## User Stories Generation
-
-**Template:** `assets/user-stories-template.md`
-
-**User stories structure:**
-- Feature Overview
-- Target Personas
-- Core User Stories (As a [user], I want [goal], so that [benefit])
-- Acceptance Criteria
-- Edge Cases & Error Handling
-- Non-Functional Stories
-- Story Prioritization
-- Story Map / User Journey
-
-**User stories guidelines:**
-1. **Follow standard format**: "As a [user], I want [goal], so that [benefit]"
-2. **Specific acceptance criteria**: Each story has 3-5 testable criteria
-3. **Include edge cases**: Error handling, validation, boundary conditions
-4. **Prioritize**: P0 (must-have), P1 (should-have), P2 (nice-to-have)
-5. **Add non-functional stories**: Performance, accessibility, security
-6. **Create story map**: Visualize user journey and story relationships
-7. **Reference personas**: Target specific user types from knowledge base
-
-**User stories workflow:**
-1. Start with spec or PRD if available (or create minimal context)
-2. Identify target user personas
-3. Map user journey and key goals
-4. Generate stories for each step in the journey
-5. Add acceptance criteria for each story
-6. Include edge cases and error scenarios
-7. Prioritize by user impact and business value
-
-**Can be generated from:**
-- Existing spec or PRD
-- Opportunity or initiative file
-- Standalone feature request
-- Backlog item
-
-## Decision Documentation
-
-**Template:** `assets/decision-doc-template.md`
-
-**Decision doc structure:**
-- Decision Summary
-- Context (why this came up)
-- Options Considered
-- Decision Made
-- Rationale
-- Tradeoffs
-- Success Criteria
-- Implementation Plan
-- Owner & Timeline
-
-**Decision doc guidelines:**
-1. **Clear decision statement**: What was decided, in one sentence
-2. **Rich context**: Why this decision came up, what's changed
-3. **Options evaluated**: What else was considered and why not chosen
-4. **Explicit tradeoffs**: What we're giving up by choosing this
-5. **Measurable success**: How we'll know this was the right call
-6. **Owner assignment**: Who's responsible for implementation
-7. **Save location**: Ask the user for their preferred location, or save to the current directory.
-
-**Decision doc workflow:**
-1. Capture the decision made
-2. Document context and background
-3. List all options that were considered
-4. Explain rationale for chosen option
-5. Call out tradeoffs and what we're giving up
-6. Define success criteria
-7. Assign owner and timeline
+**Decision Doc** (`assets/decision-doc-template.md`): State the decision in one sentence upfront. Explicit tradeoffs (what we're giving up). Measurable success criteria. Ask user for save location or use current directory.
 
 ## Quality Checklist
 
@@ -329,47 +169,6 @@ Before presenting any generated document, verify:
 
 ## Advanced Usage
 
-### Generate from Opportunities
-
-When user says "create a PRD/spec from [opportunity]":
-1. Read the opportunity or initiative file from the project
-2. Extract key context: problem, target users, strategic value
-3. Expand into full PRD/spec structure
-4. Link back to original opportunity for traceability
-
-### Generate from Initiatives
-
-When user references an initiative file:
-1. Read the initiative from the project
-2. Use as primary source of truth for context
-3. Expand into requested document type
-4. Maintain consistency with initiative content
-
-### Expand Existing Documents
-
-When user says "expand this spec into a PRD":
-1. Read existing document
-2. Identify gaps between current and target format
-3. Fill in missing sections with researched content
-4. Preserve all existing content
-5. Note what was added in the changelog
-
-### Update Document Lifecycle
-
-When user says "update status to [approved/in-review/etc]":
-1. Update status field in document header
-2. Add changelog entry with date and change
-3. Note in decision log if applicable
-
-## Assets Reference
-
-All templates are in this skill's `assets/` directory (NOT root `/templates/`):
-- `assets/prd-template.md` - Comprehensive PRD (15+ sections)
-- `assets/brief-template.md` - Project brief (1-2 pages)
-- `assets/spec-template.md` - Product spec (10+ sections)
-- `assets/user-stories-template.md` - User stories format
-- `assets/decision-doc-template.md` - Decision documentation
-
-**Note**: Root `/templates/` directory contains user-facing templates for voice samples, frameworks, and general PM templates.
-
-Templates are used as structure but never modified. Generated documents are saved to the user's preferred location.
+- **From opportunity/initiative file**: Read source → extract problem/target users/strategic value → expand into doc type → link back to source
+- **Expand existing doc**: Read existing → identify gaps → fill missing sections → preserve all existing content
+- **Update lifecycle status**: Update status field in doc header, add changelog entry with date
