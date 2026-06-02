@@ -1,0 +1,9 @@
+{
+  "name": "brainstorm",
+  "description": "Relentless design interview that resolves a plan's decisions one at a time with recommendations",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

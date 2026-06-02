@@ -97,6 +97,14 @@
       "category": "productivity",
       "version": "1.0.0",
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "brainstorm",
+      "source": "./plugins/brainstorm",
+      "description": "Relentless design interview that resolves a plan's decisions one at a time with recommendations",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     }
   ]
 }
