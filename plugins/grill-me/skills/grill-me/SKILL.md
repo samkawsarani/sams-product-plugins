@@ -1,7 +1,7 @@
 ---
-name: brainstorm
+name: grill-me
 model: opus
-description: Interviews you relentlessly about a plan or design until you reach shared understanding — walking each branch of the design tree, resolving decision dependencies one at a time, recommending an answer for every question. Invoked when asked to brainstorm, pressure-test a plan, think through a design, interrogate an approach, or when user says "brainstorm this", "interview me about X", or "let's think through the design".
+description: Interview the user relentlessly about a plan or design until you reach shared understanding — walking each branch of the design tree, resolving decision dependencies one at a time, recommending an answer for every question. Invoked when asked to stress-test a plan, get grilled on a design, or when user says "grill me", "pressure-test this", or "interview me about X".
 argument-hint: '[plan or topic to interview about]'
 ---
 
