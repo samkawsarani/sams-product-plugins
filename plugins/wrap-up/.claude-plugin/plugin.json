@@ -1,0 +1,9 @@
+{
+  "name": "wrap-up",
+  "description": "Session wrap-up: captures domain learnings, updates hypothesis tracking, and persists knowledge across sessions",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

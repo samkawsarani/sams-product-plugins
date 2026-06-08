@@ -1,0 +1,9 @@
+{
+  "name": "weekly-update",
+  "description": "Drafts a stakeholder update email from Linear projects, TASKS.md, and GOALS.md",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

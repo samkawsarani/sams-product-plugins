@@ -68,6 +68,15 @@ plugins/skill-name/
 | [write-dev-docs](./plugins/write-dev-docs/)         | Writing      | Developer documentation: API references, guides, and Postman collections               |
 | [write-doc](./plugins/write-doc/)                   | Writing      | Product documents: PRDs, specs, briefs, user stories, and decision docs                |
 | [write-ux-copy](./plugins/write-ux-copy/)           | Writing      | UX copy for buttons, errors, tooltips, notifications, and onboarding                   |
+| [end-my-day](./plugins/end-my-day/)                 | Productivity | End-of-day review: rest-of-week focus protection, tomorrow preview, meeting action items, and insight capture |
+| [start-my-day](./plugins/start-my-day/)             | Productivity | Morning briefing combining calendar agenda, focus-time check, email/Slack triage, meeting prep, and task priorities |
+| [weekly-review](./plugins/weekly-review/)           | Productivity | Reviews completed work, goal progress, blockers, and plans next week's priorities from TASKS.md |
+| [weekly-update](./plugins/weekly-update/)           | Productivity | Drafts a stakeholder update email from Linear projects, TASKS.md, and GOALS.md         |
+| [wrap-up](./plugins/wrap-up/)                       | Productivity | Session wrap-up: captures domain learnings, updates hypothesis tracking, and persists knowledge across sessions |
+
+### Product OS Skills
+
+`end-my-day`, `start-my-day`, `weekly-review`, `weekly-update`, and `wrap-up` are designed for workspaces following the [sams-product-os](https://github.com/samkawsarani/sams-product-os) structure. They expect the following to exist as defined in that repo: `tasks/TASKS.md`, `GOALS.md`, `meetings/`, `projects/`, `knowledge/`, and `VOICE-GUIDE.md`.
 
 
 ## License

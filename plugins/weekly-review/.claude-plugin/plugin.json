@@ -1,0 +1,9 @@
+{
+  "name": "weekly-review",
+  "description": "Reviews completed work, goal progress, blockers, and plans next week's priorities from TASKS.md",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

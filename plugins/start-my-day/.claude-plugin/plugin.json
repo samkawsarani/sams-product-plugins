@@ -1,0 +1,9 @@
+{
+  "name": "start-my-day",
+  "description": "Morning briefing combining calendar agenda, focus-time check, email/Slack triage, meeting prep, and task priorities",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}

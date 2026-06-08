@@ -1,0 +1,9 @@
+{
+  "name": "end-my-day",
+  "description": "End-of-day review: rest-of-week focus protection, tomorrow preview, meeting action items, and insight capture",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}
