@@ -60,6 +60,7 @@ plugins/skill-name/
 | [analyze-meetings](./plugins/analyze-meetings/)     | Productivity | Meeting transcript analysis for communication patterns, conflict avoidance, and leadership style |
 | [analyze-metrics](./plugins/analyze-metrics/)       | Analytics    | Product metrics analysis for usage, adoption, conversion, retention, and revenue data  |
 | [analyze-research](./plugins/analyze-research/)     | Research     | User research synthesis from interviews, transcripts, and feedback                     |
+| [give-feedback](./plugins/give-feedback/)           | Coaching     | Crafts high-impact feedback (constructive or positive) using the SBIR framework |
 | [grill-me](./plugins/grill-me/)                     | Productivity | Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree |
 | [build-prototype](./plugins/build-prototype/)       | Development  | React/TypeScript prototype builder from PRDs using Shadcn/ui                           |
 | [sync-meetings](./plugins/sync-meetings/)           | Productivity | Sync Granola meetings to local meetings folder with transcripts and metadata           |

@@ -1,0 +1,9 @@
+{
+  "name": "give-feedback",
+  "description": "Crafts high-impact feedback (constructive or positive) using the SBIR framework.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Kawsarani",
+    "email": "contact@samkawsarani.com"
+  }
+}
