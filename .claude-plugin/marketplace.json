@@ -153,6 +153,14 @@
       "category": "productivity",
       "version": "1.0.0",
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
+    },
+    {
+      "name": "concise-communicator",
+      "source": "./plugins/concise-communicator",
+      "description": "Hyper-efficient, zero-fluff communication style with critical thinking applied to every response",
+      "category": "productivity",
+      "version": "1.0.0",
+      "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     }
   ]
 }

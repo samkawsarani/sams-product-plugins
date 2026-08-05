@@ -76,6 +76,8 @@ plugins/skill-name/
 | [weekly-review](./plugins/weekly-review/)           | Productivity | Reviews completed work, goal progress, blockers, and plans next week's priorities from TASKS.md |
 | [weekly-update](./plugins/weekly-update/)           | Productivity | Drafts a stakeholder update email from Linear projects, TASKS.md, and GOALS.md         |
 | [wrap-up](./plugins/wrap-up/)                       | Productivity | Session wrap-up: captures domain learnings, updates hypothesis tracking, and persists knowledge across sessions |
+| [concise-communicator](./plugins/concise-communicator/) | Communication | Hyper-efficient, zero-fluff communication style with critical thinking applied to every response |
+
 
 ### Product OS Skills
 
