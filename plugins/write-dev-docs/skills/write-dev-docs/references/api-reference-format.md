@@ -16,6 +16,11 @@ Every resource page follows this order:
 2. **Authentication block** — How to auth, key formats, environments (sandbox/production)
 3. **Rate limits table** — Requests/min by tier, rate limit headers, backoff guidance
 4. **The [Resource] Object** — Full attribute table with types, descriptions, constraints
+
+Items 2 and 3 belong on every page only when the reference is a single page. On a
+multi-page site they are stated once, on their own pages, and linked. Repeating auth and rate
+limits per resource is how the copies drift, and the stale one is always the copy nobody
+remembered to update.
 5. **Endpoint sections** (one per operation, in CRUD order):
    - Create → Retrieve → Update → List → Delete
    - Each follows the endpoint section template below
@@ -58,7 +63,11 @@ Each endpoint section contains:
 
 ### Language Order
 
-Always: cURL → Node.js → Python. No exceptions.
+Default: cURL → Node.js → Python, in that order, consistently across every endpoint.
+
+Follow the publication's existing convention where one is established. Some references ship cURL
+only, deliberately, because a sample in a language the reader does not use is surface that has to
+be kept correct for nobody.
 
 ### Rules
 

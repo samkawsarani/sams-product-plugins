@@ -69,9 +69,9 @@
     {
       "name": "write-dev-docs",
       "source": "./plugins/write-dev-docs",
-      "description": "Developer documentation: API references, guides, and Postman collections",
+      "description": "Developer documentation: API references, guides, and Postman collections, with prose standards that keep generated docs from reading as generated",
       "category": "writing",
-      "version": "1.1.4",
+      "version": "1.2.0",
       "author": {"name": "Sam Kawsarani", "email": "contact@samkawsarani.com"}
     },
     {

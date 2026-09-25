@@ -2,6 +2,26 @@
 
 This is a **hard gate** — fix all failures before presenting output to the user.
 
+If the target repo carries its own style guide, it wins on every point of conflict and this
+checklist is the fallback.
+
+## Fact discipline
+- [ ] Every field name, type, and required list read out of the schema for this edit, not from
+      memory and not from another page
+- [ ] Nothing asserted that is not in the spec or the error catalog (key issuance, dashboard
+      behavior, onboarding, support, rate limits are the usual invented ones)
+- [ ] Contract gaps written down as asks, with which side you believe is right. No other repo edited
+- [ ] No rule stated twice. It lives on the page that owns it, linked from everywhere else
+- [ ] No page that only indexes what other pages contain
+
+## Prose
+See `writing-standards.md` for each of these.
+- [ ] No absence stated. Every "there is no X" passes the competent-reader test or is cut
+- [ ] No design rationale or threat model explained to the reader
+- [ ] Opening paragraph carries a fact the title does not. Delete it and check what is lost
+- [ ] No banned construction. Read it aloud; most announce themselves
+- [ ] Unsettled things carry a callout, and the callout severity matches the fact
+
 ## Completeness
 - [ ] All template sections filled with real content (no placeholders, no `[TODO]`, no `...`)
 - [ ] Every endpoint has request examples in all specified languages
@@ -30,10 +50,21 @@ This is a **hard gate** — fix all failures before presenting output to the use
 
 ## Format
 - [ ] Resource names use snake_case
-- [ ] IDs use prefixed format where applicable (`pay_`, `txn_`, `mer_`)
+- [ ] ID format in examples matches what the API actually returns. Never describe an id by what it lacks ("not a sequential number") — describe the format it has
 - [ ] Code samples follow language-specific conventions
 - [ ] Tables properly formatted with consistent columns
 - [ ] Headers follow logical hierarchy (H1 → H2 → H3)
+
+## Renames and links
+- [ ] Grepped for the old slug before renaming any heading. Rewording a heading breaks every anchor
+      pointing at it, silently
+- [ ] A changed page slug has a redirect configured
+
+## Automated checks
+- [ ] Ran the repo's check script, if it has one
+- [ ] Listed what that script cannot see, and checked each by hand. A linter that sweeps markdown
+      does not read OpenAPI `description` fields as prose, and cannot match a required-field list
+      against the schema beside it
 
 ## Guide-Specific
 - [ ] Opens with outcome statement ("By the end of this guide...")

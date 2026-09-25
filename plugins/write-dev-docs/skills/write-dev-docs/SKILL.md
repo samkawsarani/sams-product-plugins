@@ -1,7 +1,7 @@
 ---
 name: write-dev-docs
 model: sonnet
-description: Generates best-in-class developer documentation (API references, integration guides, code recipes, Postman collections) from OpenAPI specs, code, natural language, or PRDs. Stripe-quality output. Invoked when asked to write API docs, developer guides, code samples, quickstarts, Postman collections, or when user says "document this API", "write a quickstart for X", or "create a Postman collection".
+description: Generates best-in-class developer documentation (API references, integration guides, code recipes, Postman collections) from OpenAPI specs, code, natural language, or PRDs. Stripe-quality output, with prose rules that keep it from reading as generated. Defers to the target repo's own style guide where one exists. Invoked when asked to write API docs, developer guides, code samples, quickstarts, Postman collections, or when user says "document this API", "write a quickstart for X", or "create a Postman collection".
 argument-hint: '[doc-type] [name] — types: api-reference, guide, recipe, postman'
 compatibility: "qmd CLI optional for semantic search."
 ---
@@ -83,6 +83,17 @@ Identify:
 
 If doc type is ambiguous, ask the user. If input source is unclear, ask what they have available.
 
+### Step 1b: Find the house standard
+
+Before writing anything, look for a style guide the target repo already carries: `AGENTS.md`,
+`CLAUDE.md`, `CONTRIBUTING.md`, a `docs/STYLE.md`, or a check script under `scripts/`.
+
+**If one exists, it wins on every point of conflict and this skill defers to it.** Read it in full,
+follow it, and use this skill only for the workflow and the templates. A second rulebook that
+disagrees with the repo's own is worse than no rulebook.
+
+If none exists, `references/writing-standards.md` is the standard.
+
 ### Step 2: Gather Context
 
 **Always pull information from these sources (in order of priority):**
@@ -102,6 +113,17 @@ If doc type is ambiguous, ask the user. If input source is unclear, ask what the
 - Focus on API contracts, resource models, and error definitions
 - If user references specific files with @ mentions, prioritize those
 
+### Step 2b: The source moves first
+
+Where the change touches a contract (a new field, a new endpoint, a changed requirement), edit and
+lint the spec before writing a word of prose. Prose copies the spec. Writing prose first means
+writing from memory, which is the defect class that survives review most often.
+
+**A contract gap is an ask, not an edit.** A missing error code, a field the docs need that the
+spec lacks, a path that disagrees with the service that owns it: document what the source says
+today, write the gap down as an ask, and say which side you believe is right. Never edit a repo you
+were not asked to edit in order to make a sentence true.
+
 ### Step 3: Load Format Reference
 
 Load the type-specific reference file from `references/`:
@@ -110,7 +132,11 @@ Load the type-specific reference file from `references/`:
 - `references/code-recipe-format.md` — For code recipes
 - `references/postman-format.md` — For Postman collections
 
-These contain the quality standards, conventions, and structural rules for each doc type.
+These contain the structural rules for each doc type.
+
+**Always load `references/writing-standards.md` as well**, unless the repo's own style guide
+replaces it. It carries the prose rules that apply to every type: fact discipline, what to cut, the
+banned constructions, and what an automated check cannot see.
 
 ### Step 4: Generate Using Template
 
@@ -159,4 +185,8 @@ Each type has a template in `assets/` and format rules in `references/`. Key non
 
 ## Quality Checklist
 
-Validate against `references/quality-checklist.md` before presenting — this is a hard gate. Fix failures before showing output.
+Validate against `references/quality-checklist.md` and `references/writing-standards.md` before presenting — this is a hard gate. Fix failures before showing output.
+
+If the repo has a check script, run it. Then check by hand everything the script cannot see, and say
+in your summary which of those you verified. A clean run is evidence about what the script reads and
+nothing else.

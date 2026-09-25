@@ -68,7 +68,7 @@ plugins/skill-name/
 | [sync-meetings](./plugins/sync-meetings/)           | Productivity | Sync Granola meetings to local meetings folder with transcripts and metadata           |
 | [translate-i18n](./plugins/translate-i18n/)         | Localization | English-French translation with Canadian French and OQLF compliance                    |
 | [write-comms](./plugins/write-comms/)               | Writing      | Internal communications: status reports, newsletters, and stakeholder updates          |
-| [write-dev-docs](./plugins/write-dev-docs/)         | Writing      | Developer documentation: API references, guides, and Postman collections               |
+| [write-dev-docs](./plugins/write-dev-docs/)         | Writing      | Developer documentation: API references, guides, and Postman collections, with prose standards that keep generated docs from reading as generated |
 | [write-doc](./plugins/write-doc/)                   | Writing      | Product documents: PRDs, specs, briefs, user stories, and decision docs                |
 | [write-ux-copy](./plugins/write-ux-copy/)           | Writing      | UX copy for buttons, errors, tooltips, notifications, and onboarding                   |
 | [end-my-day](./plugins/end-my-day/)                 | Productivity | End-of-day review: rest-of-week focus protection, tomorrow preview, meeting action items, and insight capture |
