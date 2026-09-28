@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Star this repo](https://img.shields.io/github/stars/samkawsarani/sams-product-plugins?style=social)](https://github.com/samkawsarani/sams-product-plugins)
 
-Quick links: [Install](#install) · [Plugin catalog](#plugin-catalog)
+Quick links: [Install](#install) · [Plugin catalog](#plugin-catalog) · [External skills](#recommended-external-skills)
 
 ---
 
@@ -82,6 +82,17 @@ plugins/skill-name/
 ### Product OS Skills
 
 `end-my-day`, `start-my-day`, `weekly-review`, `weekly-update`, and `wrap-up` are designed for workspaces following the [sams-product-os](https://github.com/samkawsarani/sams-product-os) structure. They expect the following to exist as defined in that repo: `tasks/TASKS.md`, `GOALS.md`, `meetings/`, `projects/`, `knowledge/`, and `VOICE-GUIDE.md`.
+
+
+## Recommended External Skills
+
+Skills I use alongside this marketplace. They are not part of it — install them from their own source. Each is included as a git submodule under [`external/`](./external/) for reference.
+
+| Repo | Description | Install |
+| ---- | ----------- | ------- |
+| [mattpocock/skills](https://github.com/mattpocock/skills) | Engineering skills: grilling, spec/ticket flows, TDD, code review, domain modeling | `claude plugin marketplace add mattpocock/skills`<br>`claude plugin install mattpocock-skills@mattpocock` |
+
+To clone this repo with submodules: `git clone --recurse-submodules https://github.com/samkawsarani/sams-product-plugins`
 
 
 ## License
